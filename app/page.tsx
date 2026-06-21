@@ -73,6 +73,32 @@ export default function Home() {
           </a>
         </div>
 
+
+
+{/* CAREOFCANADA COMMUNITY */}
+
+<section className="mx-auto mt-12 max-w-xl rounded-3xl border border-red-100 bg-red-50 p-8 shadow-sm">
+  <h3 className="text-3xl font-bold text-gray-900">
+    Join the CareOfCanada Community 🇨🇦
+  </h3>
+
+  <p className="mt-4 text-lg text-gray-600">
+    Get job updates, newcomer guides, Canada reality checks,
+    and trusted Telugu connections.
+  </p>
+
+  <p className="mt-3 font-medium text-red-600">
+    No hype. No spam. Just clarity.
+  </p>
+
+  <div
+    className="ml-embedded mt-8"
+    data-form="QVxZ18"
+  ></div>
+</section>
+
+
+
         <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
           <a
             href="https://www.instagram.com/careofcanada"
@@ -102,7 +128,7 @@ export default function Home() {
           </a>
 
           <a
-            href="https://www.instagram.com/mcajith8"
+            href="https://www.linkedin.com/in/praneeth-kotamraju/"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border px-4 py-2"
@@ -121,7 +147,7 @@ export default function Home() {
           </div>
 
           <div className="rounded-2xl border p-6">
-            <h3 className="text-4xl font-bold text-red-600">57K+</h3>
+            <h3 className="text-4xl font-bold text-red-600">82K+</h3>
             <p className="mt-2 text-gray-600">Monthly Views</p>
           </div>
 
