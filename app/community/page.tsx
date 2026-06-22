@@ -35,6 +35,14 @@ const posts = [
             ← Back Home
           </a>
   
+          <img
+  src="/images/community-wall.jpg"
+  alt="CareOfCanada Community"
+  className="mb-8 h-64 w-full rounded-3xl object-cover shadow-sm"
+/>
+
+
+
           <div className="mb-10">
             <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-red-700">
               CareOfCanada Community 🇨🇦
