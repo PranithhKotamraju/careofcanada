@@ -28,69 +28,73 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      <nav className="sticky top-0 z-50 border-b bg-white">
-        <div className="flex items-center justify-between px-6 py-4">
-          <h1 className="text-xl font-bold text-red-600">🍁 CareOfCanada</h1>
+      
+      <nav className="sticky top-0 z-50 border-b border-red-100 bg-[#fff8f5]/95 backdrop-blur">
+  <div className="flex items-center justify-between px-6 py-3">
+    <a href="#home" className="leading-tight">
+      <h1 className="text-xl font-bold text-red-600">🍁 CareOfCanada</h1>
+      <p className="text-xs text-gray-500">Telugu Newcomer Hub</p>
+    </a>
 
-          <div className="hidden gap-6 text-sm font-medium md:flex">
-            <a href="#home">Home</a>
-            <a href="#tools">Tools</a>
-            <a href="#resources">Resources</a>
-            <a href="#videos">Videos</a>
-            <a href="/community">Community</a>
-            <a href="/community-partners">Partners</a>
-            <a href="#about">About</a>
-          </div>
+    <div className="hidden items-center gap-2 text-sm font-semibold md:flex">
+      <a href="#home" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">Home</a>
+      <a href="/first-30-days" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">First 30 Days</a>
+      <a href="#resources" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">Resources</a>
+      <a href="#videos" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">Videos</a>
+      <a href="/community" className="rounded-full bg-red-50 px-4 py-2 text-red-600">Community 🍁127</a>
+      <a href="/community-partners" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">Partners</a>
+      <a href="#about" className="rounded-full px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600">About</a>
+    </div>
 
-          <div className="flex items-center gap-3">
-            <img
-              src="/images/aj4.png"
-              alt="Ajith"
-              className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
-            />
+    <div className="flex items-center gap-3">
+      <img
+        src="/images/aj4.png"
+        alt="Ajith"
+        className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
+      />
 
-            <a
-              href="https://www.instagram.com/mcajith8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden rounded-lg bg-red-600 px-4 py-2 text-white md:block"
-            >
-              Connect With Aj
-            </a>
+      <a
+        href="https://www.instagram.com/mcajith8"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hidden rounded-xl bg-red-600 px-5 py-2 font-semibold text-white shadow-sm hover:bg-red-700 md:block"
+      >
+        Meet Ajith
+      </a>
 
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-3xl md:hidden"
-              aria-label="Open menu"
-            >
-              ☰
-            </button>
-          </div>
-        </div>
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="text-3xl md:hidden"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+    </div>
+  </div>
 
-        {menuOpen && (
-          <div className="border-t bg-white px-6 py-4 md:hidden">
-            <div className="flex flex-col gap-4 text-sm font-medium">
-              <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-              <a href="#tools" onClick={() => setMenuOpen(false)}>Tools</a>
-              <a href="#resources" onClick={() => setMenuOpen(false)}>Resources</a>
-              <a href="#videos" onClick={() => setMenuOpen(false)}>Videos</a>
-              <a href="/community" onClick={() => setMenuOpen(false)}>Community</a>
-              <a href="/community-partners" onClick={() => setMenuOpen(false)}>Partners</a>
-              <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+  {menuOpen && (
+    <div className="border-t border-red-100 bg-[#fff8f5] px-6 py-4 md:hidden">
+      <div className="flex flex-col gap-3 text-sm font-semibold">
+        <a href="#home" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">Home</a>
+        <a href="/first-30-days" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">First 30 Days</a>
+        <a href="#resources" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">Resources</a>
+        <a href="#videos" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">Videos</a>
+        <a href="/community" onClick={() => setMenuOpen(false)} className="rounded-xl bg-red-600 px-4 py-3 text-white">Community 🍁127</a>
+        <a href="/community-partners" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">Partners</a>
+        <a href="#about" onClick={() => setMenuOpen(false)} className="rounded-xl px-4 py-3 hover:bg-red-50">About</a>
 
-              <a
-                href="https://www.instagram.com/mcajith8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg bg-red-600 px-4 py-2 text-center text-white"
-              >
-                Connect With Aj
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
+        <a
+          href="https://www.instagram.com/mcajith8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-xl bg-red-600 px-4 py-3 text-center text-white"
+        >
+          Meet Ajith
+        </a>
+      </div>
+    </div>
+  )}
+</nav>
 
       <section
         id="home"
