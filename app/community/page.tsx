@@ -6,7 +6,8 @@ const posts = [
       city: "Brampton",
       points: 120,
       category: "Win 🎉",
-      message: "Got my first interview after 3 months of applying. Feeling hopeful today.",
+      message:
+        "Got my first interview after 3 months of applying. Feeling hopeful today.",
       time: "2 hours ago",
     },
     {
@@ -29,40 +30,85 @@ const posts = [
   
   export default function CommunityWall() {
     return (
-      <main className="min-h-screen bg-gray-50 px-6 py-12 text-gray-900">
-        <section className="mx-auto max-w-6xl">
-          <a href="/" className="mb-8 inline-block rounded-xl border bg-white px-5 py-3 font-semibold">
+      <main className="min-h-screen bg-gradient-to-b from-red-50 to-white px-6 py-12 text-gray-900">
+        <section className="mx-auto max-w-7xl">
+          <a
+            href="/"
+            className="mb-8 inline-block rounded-xl border bg-white px-5 py-3 font-semibold"
+          >
             ← Back Home
           </a>
   
           <img
-  src="/images/community-wall.jpg"
-  alt="CareOfCanada Community"
-  className="mb-8 h-52 w-full rounded-3xl object-cover shadow-sm"
-/>
-
-
-
-          <div className="mb-10">
-            <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-red-700">
+            src="/images/community-wall.jpg"
+            alt="CareOfCanada Community"
+            className="mb-8 h-52 w-full rounded-3xl object-cover shadow-sm"
+          />
+  
+          <div className="mb-8">
+            <p className="mb-4 inline-block rounded-full bg-white px-4 py-2 text-sm font-medium text-red-700">
               CareOfCanada Community 🇨🇦
             </p>
   
-            <h1 className="text-4xl font-bold md:text-6xl">Community Wall</h1>
+            <h1 className="text-4xl font-bold md:text-6xl">
+              🍁 Telugu Newcomer Community
+            </h1>
   
-            <p className="mt-4 max-w-2xl text-xl text-gray-600">
-              Share a win, ask a question, or help another Telugu newcomer in Canada.
+            <p className="mt-4 max-w-3xl text-xl text-gray-600">
+              Built by a Telugu newcomer. For Telugu newcomers across Canada.
             </p>
           </div>
   
-          <div className="grid gap-8 lg:grid-cols-[1fr_320px]">
+          <div className="mb-10 grid gap-4 md:grid-cols-4">
+            <div className="rounded-2xl border bg-white p-4 text-center shadow-sm">
+              <p className="text-3xl font-bold text-red-600">127</p>
+              <p className="text-gray-500">Members</p>
+            </div>
+  
+            <div className="rounded-2xl border bg-white p-4 text-center shadow-sm">
+              <p className="text-3xl font-bold text-red-600">52</p>
+              <p className="text-gray-500">Posts</p>
+            </div>
+  
+            <div className="rounded-2xl border bg-white p-4 text-center shadow-sm">
+              <p className="text-3xl font-bold text-red-600">14</p>
+              <p className="text-gray-500">Housing</p>
+            </div>
+  
+            <div className="rounded-2xl border bg-white p-4 text-center shadow-sm">
+              <p className="text-3xl font-bold text-red-600">18</p>
+              <p className="text-gray-500">Jobs</p>
+            </div>
+          </div>
+  
+          <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
             <div>
               <div className="rounded-3xl border bg-white p-6 shadow-sm">
-                <h2 className="text-2xl font-bold">What's on your mind, mowa?</h2>
+                <h2 className="text-2xl font-bold">
+                  🍁 Share something with the community
+                </h2>
   
-                <div className="mt-5 grid gap-4 md:grid-cols-2">
-                  <input className="rounded-xl border px-4 py-3" placeholder="Name (optional)" />
-                  <input className="rounded-xl border px-4 py-3" placeholder="City" />
+                <p className="mt-2 text-gray-500">
+                  Ask questions. Share wins. Help newcomers.
+                </p>
+  
+                <div className="mt-5 grid gap-4 md:grid-cols-3">
+                  <input
+                    className="rounded-xl border px-4 py-3"
+                    placeholder="Name (optional)"
+                  />
+  
+                  <input
+                    className="rounded-xl border px-4 py-3"
+                    placeholder="City"
+                  />
+  
+                  <select className="rounded-xl border px-4 py-3">
+                    <option>Win 🎉</option>
+                    <option>Question ❓</option>
+                    <option>Housing 🏠</option>
+                    <option>Jobs 💼</option>
+                  </select>
                 </div>
   
                 <textarea
@@ -102,7 +148,10 @@ const posts = [
   
                 <div className="divide-y">
                   {posts.map((post, index) => (
-                    <article key={index} className="py-6 first:pt-0 last:pb-0">
+                    <article
+                      key={index}
+                      className="rounded-2xl px-3 py-6 transition hover:bg-red-50 first:pt-0 last:pb-0"
+                    >
                       <div className="flex gap-4">
                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-red-50 font-bold text-red-600">
                           {post.name.charAt(0)}
@@ -139,6 +188,27 @@ const posts = [
             </div>
   
             <aside className="space-y-6">
+              <div className="rounded-3xl border bg-white p-6 shadow-sm">
+                <h2 className="text-xl font-bold">🍁 Top Contributors</h2>
+  
+                <div className="mt-4 space-y-4">
+                  <div className="flex justify-between">
+                    <span>Ajith</span>
+                    <span className="font-bold text-red-600">950</span>
+                  </div>
+  
+                  <div className="flex justify-between">
+                    <span>Sai</span>
+                    <span className="font-bold text-red-600">120</span>
+                  </div>
+  
+                  <div className="flex justify-between">
+                    <span>Priya</span>
+                    <span className="font-bold text-red-600">45</span>
+                  </div>
+                </div>
+              </div>
+  
               <div className="rounded-3xl border bg-white p-6 shadow-sm">
                 <h2 className="text-xl font-bold">Community Rules</h2>
   
