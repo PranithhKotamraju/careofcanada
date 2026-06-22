@@ -158,6 +158,66 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-6 py-16">
+  <div className="mx-auto max-w-5xl">
+
+    <div className="text-center mb-10">
+      <h2 className="text-3xl font-bold">
+        🏡 Trusted Community Partner
+      </h2>
+
+      <p className="mt-3 text-gray-600">
+        Looking for a trusted Telugu realtor in the GTA?
+      </p>
+    </div>
+
+    <div className="rounded-3xl border bg-white p-8 shadow-sm md:flex md:items-center md:gap-8">
+
+      <img
+        src="/images/realtor.png"
+        alt="Realtor"
+        className="mx-auto h-40 w-40 rounded-full object-cover border"
+      />
+
+      <div className="mt-6 md:mt-0">
+        <h3 className="text-2xl font-bold">
+          Ragav Balasa
+        </h3>
+
+        <p className="mt-2 text-gray-600">
+          GTA Realtor helping Telugu families buy, sell,
+          and invest across the Greater Toronto Area.
+        </p>
+
+        <div className="mt-4 space-y-2 text-sm">
+          <p>✅ Telugu & English</p>
+          <p>✅ First-Time Home Buyers</p>
+          <p>✅ Investment Properties</p>
+          <p>✅ GTA & Surrounding Areas</p>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            href="tel:+1234567890"
+            className="rounded-lg bg-red-600 px-4 py-2 text-white"
+          >
+            Call
+          </a>
+
+          <a
+            href="mailto:realtor@email.com"
+            className="rounded-lg border px-4 py-2"
+          >
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
       <section id="tools" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-center text-3xl font-bold">
           Tools for your first steps in Canada
