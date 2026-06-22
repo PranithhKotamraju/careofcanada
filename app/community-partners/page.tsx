@@ -2,6 +2,13 @@ export default function CommunityPartners() {
     return (
       <main className="min-h-screen bg-white px-6 py-16 text-gray-900">
         <section className="mx-auto max-w-5xl">
+          <a
+            href="/"
+            className="mb-8 inline-block rounded-xl border px-5 py-3 font-semibold text-gray-900"
+          >
+            ← Back Home
+          </a>
+
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold">🤝 Community Partners</h1>
   

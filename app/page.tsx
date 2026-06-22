@@ -147,30 +147,26 @@ export default function Home() {
       </section>
 
 {/* JOIN COMMUNITY SECTION */}
+
+{/* JOIN COMMUNITY SECTION */}
 <section className="px-6 pb-20">
-  <div className="mx-auto max-w-2xl rounded-3xl border bg-gray-50 p-10 text-center">
-    <h3 className="text-3xl font-bold text-gray-900">
-      Want newcomer updates?
+  <div className="mx-auto max-w-4xl rounded-3xl border p-12 text-center">
+    <h3 className="text-4xl font-bold text-gray-900">
+    Join the Community 🇨🇦
     </h3>
 
-    <p className="mt-4 text-lg text-gray-600">
-      Jobs. Money. Settlement.
+    <p className="mt-6 text-xl text-gray-600">
+    Jobs. Money. Settlement.
+    For Telugu newcomers in Canada.
     </p>
 
-    <p className="mt-2 text-gray-600">
-      Join 6,000+ Telugu newcomers following CareOfCanada.
-    </p>
-
-    <a
-      href="https://preview.mailerlite.io/forms/2461634/190924753687545174/share"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-6 inline-block rounded-xl bg-red-600 px-8 py-3 font-semibold text-white"
-    >
-      Join Community
-    </a>
+    <div
+      className="ml-embedded mt-8"
+      data-form="QVxZ18"
+    ></div>
   </div>
 </section>
+
 
       <section id="tools" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-center text-3xl font-bold">
