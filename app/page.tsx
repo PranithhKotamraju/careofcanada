@@ -172,7 +172,12 @@ export default function Home() {
         <h2 className="mb-10 text-center text-3xl font-bold">
           Tools for your first steps in Canada
         </h2>
-
+        <a
+  href="/first-30-days"
+  className="mt-4 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white"
+>
+  Open Checklist
+</a>
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-2xl border p-6 shadow-sm">
             <div className="mb-4 text-4xl">📋</div>
