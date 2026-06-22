@@ -162,7 +162,7 @@ export default function Home() {
     </p>
 
     <a
-      href="https://preview.mailerlite.io/forms/your-link"
+      href="https://preview.mailerlite.io/forms/2461634/190924753687545174/share"
       target="_blank"
       rel="noopener noreferrer"
       className="mt-6 inline-block rounded-xl bg-red-600 px-8 py-3 font-semibold text-white"
