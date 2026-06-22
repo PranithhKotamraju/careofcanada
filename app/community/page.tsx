@@ -38,7 +38,7 @@ const posts = [
           <img
   src="/images/community-wall.jpg"
   alt="CareOfCanada Community"
-  className="mb-8 h-64 w-full rounded-3xl object-cover shadow-sm"
+  className="mb-8 h-52 w-full rounded-3xl object-cover shadow-sm"
 />
 
 
