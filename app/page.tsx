@@ -174,7 +174,7 @@ export default function Home() {
     <div className="rounded-3xl border bg-white p-8 shadow-sm md:flex md:items-center md:gap-8">
 
       <img
-        src="/images/realtor.png"
+        src="/images/ragav1.png"
         alt="Realtor"
         className="mx-auto h-40 w-40 rounded-full object-cover border"
       />
@@ -198,14 +198,14 @@ export default function Home() {
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="tel:+1234567890"
+            href="tel:+19022185157"
             className="rounded-lg bg-red-600 px-4 py-2 text-white"
           >
             Call
           </a>
 
           <a
-            href="mailto:realtor@email.com"
+            href="mailto:ragav@gethomerealty.com"
             className="rounded-lg border px-4 py-2"
           >
             Email
