@@ -94,7 +94,7 @@ export default function Home() {
 
       <section
         id="home"
-        className="relative overflow-hidden bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] px-6 py-14"
+        className="relative overflow-hidden bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] px-6 py-6"
       >
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <img
@@ -104,20 +104,20 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-[1fr_380px]">
+        <div className="relative z-10 mx-auto grid max-w-6xl items-start gap-6 lg:grid-cols-[1fr_360px]">
           <div className="text-center lg:text-left">
-            <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-red-700">
-            The Telugu Newcomer Hub 🇨🇦
-            </p>
+          <h2 className="text-4xl font-bold leading-tight md:text-5xl">
+  The Telugu Newcomer Hub 🇨🇦
+  <span className="block text-red-600">
+    Jobs. Housing. Money. Community.
+  </span>
+</h2>
 
-            <h2 className="text-5xl font-bold leading-tight md:text-7xl">
-            Jobs. Housing. Money. Community.
-              <span className="block text-red-600">Everything you need to start your Canada journey.</span>
-            </h2>
+<p className="mt-4 max-w-2xl text-lg text-gray-600 lg:mx-0">
+  Everything you need to start your Canada journey.
+</p>
 
-            <p className="mt-6 max-w-3xl text-xl text-gray-600 lg:mx-0">
-              Jobs. Money. Settlement. Real-life Canada guidance.
-            </p>
+           
 
             <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
               <a
@@ -135,7 +135,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-8 max-w-xl rounded-3xl border bg-white p-6 shadow-sm lg:mx-0">
+            <div className="mt-4 max-w-lg rounded-2xl border bg-white/90 p-5 shadow-sm lg:mx-0">
               <h3 className="text-2xl font-bold">Join the Community 🇨🇦</h3>
               <p className="mt-2 text-gray-600">Jobs. Money. Settlement.</p>
 
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] p-6 text-white shadow-[0_20px_50px_rgba(220,38,38,0.18)]">
+          <div className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] p-5 text-white shadow-[0_20px_50px_rgba(220,38,38,0.18)]">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-semibold text-red-400">
@@ -174,7 +174,7 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="mt-6 space-y-4">
+            <div className="mt-4 space-y-4">
               {communityPreviewPosts.map((post, index) => (
                 <div
                   key={index}
@@ -202,7 +202,7 @@ export default function Home() {
 
             <a
               href="/community"
-              className="mt-6 block rounded-xl bg-red-600 px-5 py-3 text-center font-semibold text-white hover:bg-red-700"
+              className="mt-4 block rounded-xl bg-red-600 px-5 py-3 text-center font-semibold text-white hover:bg-red-700"
             >
               View Community Wall
             </a>
@@ -320,7 +320,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="bg-red-600 px-6 py-20 text-center text-white">
+      <section id="about" className="bg-gradient-to-b from-[#fff8f5] to-[#fdeee8] px-6 py-16 text-center text-gray-900">
         <h2 className="text-4xl font-bold">
           The Story Behind CareOfCanada 🇨🇦
         </h2>
@@ -362,7 +362,7 @@ export default function Home() {
           href="https://www.instagram.com/mcajith8"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-block rounded-xl bg-white px-6 py-3 font-semibold text-red-600"
+          className="mt-10 inline-block rounded-xl bg-red-600 px-6 py-3 font-semibold text-white"
         >
           Connect With Ajith
         </a>
