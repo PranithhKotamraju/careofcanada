@@ -146,6 +146,32 @@ export default function Home() {
         </div>
       </section>
 
+{/* JOIN COMMUNITY SECTION */}
+<section className="px-6 pb-20">
+  <div className="mx-auto max-w-2xl rounded-3xl border bg-gray-50 p-10 text-center">
+    <h3 className="text-3xl font-bold text-gray-900">
+      Want newcomer updates?
+    </h3>
+
+    <p className="mt-4 text-lg text-gray-600">
+      Jobs. Money. Settlement.
+    </p>
+
+    <p className="mt-2 text-gray-600">
+      Join 6,000+ Telugu newcomers following CareOfCanada.
+    </p>
+
+    <a
+      href="https://preview.mailerlite.io/forms/your-link"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-6 inline-block rounded-xl bg-red-600 px-8 py-3 font-semibold text-white"
+    >
+      Join Community
+    </a>
+  </div>
+</section>
+
       <section id="tools" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-center text-3xl font-bold">
           Tools for your first steps in Canada
