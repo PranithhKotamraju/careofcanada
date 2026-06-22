@@ -4,7 +4,7 @@ export default function CommunityPartners() {
         <section className="mx-auto max-w-5xl">
           <a
             href="/"
-            className="mb-8 inline-block rounded-xl border px-5 py-3 font-semibold text-gray-900"
+            className="relative overflow-hidden bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] px-6 py-6"
           >
             ← Back Home
           </a>
@@ -66,7 +66,7 @@ export default function CommunityPartners() {
               <h2 className="mt-5 text-2xl font-bold">🍕 Food & Catering</h2>
   
               <h3 className="mt-2 text-xl font-semibold">
-                Bala Chandrudu Garu
+                Bala Chandrudu Gara
               </h3>
   
               <p className="mt-3 text-gray-600">

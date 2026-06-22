@@ -355,11 +355,16 @@ export default function Home() {
             life in Canada.
           </p>
 
-          <p className="text-3xl font-bold">
-            Built by a Telugu newcomer.
-            <br />
-            For Telugu newcomers.
-          </p>
+         
+          <h3 className="text-3xl font-bold">
+  Jobs. Housing. Money. Community.
+</h3>
+
+<p className="mt-4 text-xl text-gray-600">
+  Everything you need to start your Canada journey.
+</p>
+
+
         </div>
 
         <a
@@ -373,7 +378,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t px-6 py-8 text-center text-sm text-gray-600">
-        © 2026 CareOfCanada • Built by a Telugu newcomer. For Telugu newcomers.
+        © 2026 CareOfCanada • The Telugu Newcomer Hub 🇨🇦
       </footer>
     </main>
   );
