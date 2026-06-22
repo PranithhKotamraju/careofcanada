@@ -173,7 +173,7 @@ export default function Home() {
           Tools for your first steps in Canada
         </h2>
         <a
-  href="/first-30-days"
+  href="/first-30-days/"
   className="mt-4 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white"
 >
   Open Checklist
