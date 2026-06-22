@@ -19,6 +19,7 @@ export default function Home() {
       <a href="#tools">Tools</a>
       <a href="#resources">Resources</a>
       <a href="#videos">Videos</a>
+      <a href="/community">Community</a>
       <a href="/community-partners">Partners</a>
       <a href="#about">About</a>
     </div>
