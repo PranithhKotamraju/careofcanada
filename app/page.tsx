@@ -94,7 +94,7 @@ export default function Home() {
 
       <section
         id="home"
-        className="relative overflow-hidden bg-gradient-to-b from-white to-red-50 px-6 py-20"
+        className="relative overflow-hidden bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] px-6 py-14"
       >
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <img
@@ -104,15 +104,15 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_420px]">
+        <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-6 lg:grid-cols-[1fr_380px]">
           <div className="text-center lg:text-left">
             <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm font-medium text-red-700">
-              Made for Telugu Newcomers in Canada 🇨🇦
+            The Telugu Newcomer Hub 🇨🇦
             </p>
 
             <h2 className="text-5xl font-bold leading-tight md:text-7xl">
-              Built by a Telugu newcomer.
-              <span className="block text-red-600">For Telugu newcomers.</span>
+            Jobs. Housing. Money. Community.
+              <span className="block text-red-600">Everything you need to start your Canada journey.</span>
             </h2>
 
             <p className="mt-6 max-w-3xl text-xl text-gray-600 lg:mx-0">
@@ -158,7 +158,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#2a1717] to-[#140909] p-6 text-white shadow-2xl">
+          <div className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] p-6 text-white shadow-[0_20px_50px_rgba(220,38,38,0.18)]">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-semibold text-red-400">
