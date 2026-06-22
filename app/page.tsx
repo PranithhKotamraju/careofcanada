@@ -13,129 +13,91 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-3">
-  <img
-    src="/images/aj4.png"
-    alt="Ajith"
-    className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
-  />
-
-  <a
-    href="https://www.instagram.com/mcajith8"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-red-600 text-white px-4 py-2 rounded-lg"
-  >
-    Connect With Aj
-  </a>
-</div>
-
-      </nav>
-
-      <section id="home" className="relative overflow-hidden px-6 py-24 text-center">
-  <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-    <img
-      src="/images/cocaj.jpg"
-      alt="CareOfCanada"
-      className="w-[800px] opacity-5"
-    />
-  </div>
-
-  <div className="relative z-10">
-    <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm text-red-700">
-      Made for Telugu Newcomers in Canada 🇨🇦
-    </p>
-
-    <h2 className="text-5xl font-bold leading-tight md:text-7xl">
-      Canada lo hype kaadu.
-      <span className="block text-red-600">Clarity.</span>
-    </h2>
-
-    <p className="mx-auto mt-6 max-w-3xl text-xl text-gray-600">
-      Canada, no hype. No fear. Straight facts. Telugu lo calm guidance for newcomers.
-    </p>
-    </div>
-
-
-
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="#tools"
-            className="rounded-xl bg-red-600 px-6 py-3 font-semibold text-white"
-          >
-            Start Your Journey
-          </a>
-
-          <a
-            href="#resources"
-            className="rounded-xl border px-6 py-3 font-semibold"
-          >
-            Explore Resources
-          </a>
-        </div>
-
-
-
-{/* CAREOFCANADA COMMUNITY */}
-
-<section className="mx-auto mt-12 max-w-xl rounded-3xl border border-red-100 bg-red-50 p-8 shadow-sm">
-  <h3 className="text-3xl font-bold text-gray-900">
-    Join the CareOfCanada Community 🇨🇦
-  </h3>
-
-  <p className="mt-4 text-lg text-gray-600">
-    Get job updates, newcomer guides, Canada reality checks,
-    and trusted Telugu connections.
-  </p>
-
-  <p className="mt-3 font-medium text-red-600">
-    No hype. No spam. Just clarity.
-  </p>
-
-  <div
-    className="ml-embedded mt-8"
-    data-form="QVxZ18"
-  ></div>
-</section>
-
-
-
-        <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
-          <a
-            href="https://www.instagram.com/careofcanada"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border px-4 py-2"
-          >
-            📸 Instagram
-          </a>
-
-          <a
-            href="https://www.youtube.com/@careofcanadaTV"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border px-4 py-2"
-          >
-            ▶️ YouTube
-          </a>
+          <img
+            src="/images/aj4.png"
+            alt="Ajith"
+            className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
+          />
 
           <a
             href="https://www.instagram.com/mcajith8"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border px-4 py-2"
+            className="rounded-lg bg-red-600 px-4 py-2 text-white"
           >
-            🎤 Ajith
+            Connect With Aj
           </a>
+        </div>
+      </nav>
 
-          <a
-            href="https://www.linkedin.com/in/praneeth-kotamraju/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border px-4 py-2"
-          >
-            💻 Linkedin
-          </a>
+      <section id="home" className="relative overflow-hidden px-6 py-24 text-center">
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <img
+            src="/images/cocaj.jpg"
+            alt="CareOfCanada"
+            className="w-[800px] opacity-5"
+          />
+        </div>
 
+        <div className="relative z-10">
+          <p className="mb-4 inline-block rounded-full bg-red-50 px-4 py-2 text-sm text-red-700">
+            Made for Telugu Newcomers in Canada 🇨🇦
+          </p>
+
+          <h2 className="text-5xl font-bold leading-tight md:text-7xl">
+            Canada lo hype kaadu.
+            <span className="block text-red-600">Clarity.</span>
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-xl text-gray-600">
+            Your Friendly Neighborhood Telugu in Canada. Jobs, money, settlement,
+            and real-life Canada guidance.
+          </p>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="#tools" className="rounded-xl bg-red-600 px-6 py-3 font-semibold text-white">
+              Start Your Journey
+            </a>
+
+            <a href="#resources" className="rounded-xl border px-6 py-3 font-semibold">
+              Explore Resources
+            </a>
+          </div>
+
+          <section className="mx-auto mt-12 max-w-xl rounded-3xl border border-red-100 bg-red-50 p-8 shadow-sm">
+            <h3 className="text-3xl font-bold text-gray-900">
+              Join the CareOfCanada Community 🇨🇦
+            </h3>
+
+            <p className="mt-4 text-lg text-gray-600">
+              Get job updates, newcomer guides, Canada reality checks,
+              and trusted Telugu connections.
+            </p>
+
+            <p className="mt-3 font-medium text-red-600">
+              No hype. No spam. Just clarity.
+            </p>
+
+            <div className="ml-embedded mt-8" data-form="QVxZ18"></div>
+          </section>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm">
+            <a href="https://www.instagram.com/careofcanada" target="_blank" rel="noopener noreferrer" className="rounded-full border px-4 py-2">
+              📸 Instagram
+            </a>
+
+            <a href="https://www.youtube.com/@careofcanadaTV" target="_blank" rel="noopener noreferrer" className="rounded-full border px-4 py-2">
+              ▶️ YouTube
+            </a>
+
+            <a href="https://www.instagram.com/mcajith8" target="_blank" rel="noopener noreferrer" className="rounded-full border px-4 py-2">
+              🎤 Ajith
+            </a>
+
+            <a href="https://www.linkedin.com/in/praneeth-kotamraju/" target="_blank" rel="noopener noreferrer" className="rounded-full border px-4 py-2">
+              💻 LinkedIn
+            </a>
+          </div>
         </div>
       </section>
 
@@ -159,64 +121,55 @@ export default function Home() {
       </section>
 
       <section className="bg-white px-6 py-16">
-  <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold">🏡 Trusted Community Partner</h2>
+            <p className="mt-3 text-gray-600">
+              Looking for a trusted Telugu realtor in the GTA?
+            </p>
+          </div>
 
-    <div className="text-center mb-10">
-      <h2 className="text-3xl font-bold">
-        🏡 Trusted Community Partner
-      </h2>
+          <div className="rounded-3xl border bg-white p-8 shadow-sm md:flex md:items-center md:gap-8">
+            <img
+              src="/images/ragavf1.png"
+              alt="Ragav Balasa"
+              className="mx-auto h-48 w-48 rounded-full border-4 border-red-100 object-cover"
+            />
 
-      <p className="mt-3 text-gray-600">
-        Looking for a trusted Telugu realtor in the GTA?
-      </p>
-    </div>
+            <div className="mt-6 md:mt-0">
+              <h3 className="text-4xl font-bold">Ragav Balasa</h3>
 
-    <div className="rounded-3xl border bg-white p-8 shadow-sm md:flex md:items-center md:gap-8">
+              <p className="mt-2 text-xl text-gray-600">GTA Realtor®</p>
 
-      <img
-        src="/images/ragav1.png"
-        alt="Realtor"
-        className="mx-auto h-40 w-40 rounded-full object-cover border"
-      />
+              <p className="mt-4 text-lg text-gray-700">
+                Helping Telugu families buy, sell, and invest across the Greater Toronto Area.
+              </p>
 
-      <div className="mt-6 md:mt-0">
-        <h3 className="text-2xl font-bold">
-          Ragav Balasa
-        </h3>
+              <div className="mt-6 space-y-3 text-lg">
+                <p>✅ Telugu & English</p>
+                <p>✅ First-Time Home Buyers</p>
+                <p>✅ Investment Properties</p>
+                <p>✅ Pre-Construction Homes</p>
+                <p>✅ GTA & Surrounding Areas</p>
+              </div>
 
-        <p className="mt-2 text-gray-600">
-          GTA Realtor helping Telugu families buy, sell,
-          and invest across the Greater Toronto Area.
-        </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <a href="tel:19022185157" className="rounded-xl bg-red-600 px-6 py-3 font-semibold text-white">
+                  📞 Call Now
+                </a>
 
-        <div className="mt-4 space-y-2 text-sm">
-          <p>✅ Telugu & English</p>
-          <p>✅ First-Time Home Buyers</p>
-          <p>✅ Investment Properties</p>
-          <p>✅ GTA & Surrounding Areas</p>
+                <a href="https://www.gethomerealty.ca" target="_blank" rel="noopener noreferrer" className="rounded-xl border px-6 py-3 font-semibold">
+                  🌐 Visit Website
+                </a>
+              </div>
+
+              <p className="mt-6 text-sm italic text-gray-500">
+                Mention CareOfCanada when you contact him.
+              </p>
+            </div>
+          </div>
         </div>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="tel:+19022185157"
-            className="rounded-lg bg-red-600 px-4 py-2 text-white"
-          >
-            Call
-          </a>
-
-          <a
-            href="mailto:ragav@gethomerealty.com"
-            className="rounded-lg border px-4 py-2"
-          >
-            Email
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       <section id="tools" className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="mb-10 text-center text-3xl font-bold">
@@ -252,9 +205,7 @@ export default function Home() {
 
       <section id="resources" className="bg-gray-50 px-6 py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="mb-10 text-center text-3xl font-bold">
-            Free Resources
-          </h2>
+          <h2 className="mb-10 text-center text-3xl font-bold">Free Resources</h2>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl bg-white p-6 shadow-sm">
@@ -295,81 +246,55 @@ export default function Home() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="https://www.instagram.com/careofcanada"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-xl bg-red-600 px-6 py-3 font-semibold text-white"
-          >
+          <a href="https://www.instagram.com/careofcanada" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-red-600 px-6 py-3 font-semibold text-white">
             Watch on Instagram
           </a>
 
-          <a
-            href="https://www.youtube.com/@careofcanadaTV"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-xl border px-6 py-3 font-semibold"
-          >
+          <a href="https://www.youtube.com/@careofcanadaTV" target="_blank" rel="noopener noreferrer" className="rounded-xl border px-6 py-3 font-semibold">
             Watch on YouTube
           </a>
         </div>
       </section>
 
       <section id="about" className="bg-red-600 px-6 py-20 text-center text-white">
-        <h2 className="text-3xl font-bold">About Ajith & CareOfCanada</h2>
-        <p className="mx-auto mt-4 max-w-3xl text-lg">
-        <div className="max-w-4xl mx-auto text-xl leading-relaxed">
+        <h2 className="text-3xl font-bold">
+          Meet Your Friendly Neighborhood CareOfCanada 🇨🇦
+        </h2>
 
- {/* AJITH PHOTO */}
- <img
-      src="/images/aj4.png"
-      alt="Ajith"
-      className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-white object-cover shadow-xl"
-    />
+        <div className="mx-auto mt-6 max-w-4xl text-xl leading-relaxed">
+          <img
+            src="/images/aj4.png"
+            alt="Ajith"
+            className="mx-auto mb-8 h-32 w-32 rounded-full border-4 border-white object-cover shadow-xl"
+          />
 
-   
+          <p className="mb-4">Namaste mowa 👋</p>
 
+          <p className="mb-4">
+            I'm Ajith — a software engineer, Telugu rapper, content creator,
+            husband, father, and fellow immigrant building a life in Canada.
+          </p>
 
-  <p className="mb-4">
-    Namaste mowa 👋
-  </p>
+          <p className="mb-4">
+            Behind every video, every late-night idea, and every small win is my wife —
+            my biggest supporter, toughest critic, and strongest teammate on this journey.
+          </p>
 
-  <p className="mb-4">
-  I'm Ajith — a Software Engineer, Telugu rapper, content creator, husband, father, and fellow immigrant building a life in Canada.
-Behind every video, every late-night idea, and every small win is my wife — my biggest supporter, toughest critic, and strongest teammate on this journey.
-  </p>
+          <p className="mb-4 font-semibold">
+            Andharu information istaru.
+            <br />
+            Kani clarity evaru ivvaru.
+          </p>
 
-  <p className="mb-4">
-    Like many newcomers, I came here with dreams, doubts,
-    and hundreds of questions.
-  </p>
+          <p className="mb-4">
+            That's why I started CareOfCanada — to help Telugu newcomers understand
+            jobs, money, settlement, and real life in Canada without hype or fear.
+          </p>
 
-  <p className="mb-4 font-semibold">
-    Andharu information istaru.
-    <br />
-    Kani clarity evaru ivvaru.
-  </p>
+          <p className="text-2xl font-bold">Canada lo hype kaadu. Clarity.</p>
 
-  <p className="mb-4">
-    That's why I started CareOfCanada.
-  </p>
-
-  <p className="mb-4">
-    A place where Telugu people can understand jobs, money,
-    settlement, and real life in Canada without hype,
-    fear, or confusion.
-  </p>
-
-  <p className="font-bold text-2xl">
-    Canada lo hype kaadu. Clarity.
-  </p>
-
-  <p className="mt-4">
-    🇮🇳 ❤️ 🇨🇦
-  </p>
-</div>
-
-        </p>
+          <p className="mt-4">🇮🇳 ❤️ 🇨🇦</p>
+        </div>
 
         <a
           href="https://www.instagram.com/mcajith8"
