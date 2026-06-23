@@ -16,6 +16,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "CareOfCanada",
   description: "Canada. No hype. Just clarity.",
+  icons: {
+    icon: "/brand/careofcanada-tab-icon.png",
+    shortcut: "/brand/careofcanada-tab-icon.png",
+    apple: "/brand/careofcanada-tab-icon.png",
+  },
 };
 
 export default function RootLayout({

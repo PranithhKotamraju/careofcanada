@@ -31,14 +31,11 @@ const communityPreviewPosts = [
 ];
 
 const navLinks = [
-  ["Home", "#home"],
-  ["First 30 Days", "/first-30-days"],
-  ["Resources", "#resources"],
-  ["Videos", "#videos"],
+  ["Start Here", "/first-30-days"],
+  ["Tools", "#tools"],
   ["Community 🍁127", "/community"],
+  ["This Week", "#this-week"],
   ["1:1 Call", "#guidance-call"],
-  ["Partners", "/community-partners"],
-  ["About", "#about"],
 ];
 
 const stats = [
@@ -60,6 +57,18 @@ const resources = [
   ["Money Basics", "Budgeting, credit score and survival cost basics."],
 ];
 
+const thisWeekEvents = [
+  {
+    title: "Mahalaxmi Vastra Veda Saree Pop-Up",
+    date: "June 27, 2026",
+    location: "42 Clipper Lane, Bowmanville, ON",
+    description:
+      "Exclusive in-person saree pop-up for upcoming Aashadam and Shravana Masam collections.",
+    image: "/images/mahalaxmi-saree-pop-up.jpg",
+    href: "https://wa.me/12899967567",
+  },
+];
+
 const mailerLiteSubscribeUrl =
   "https://assets.mailerlite.com/jsonp/2461634/forms/190924753687545174/subscribe";
 
@@ -76,11 +85,18 @@ export default function Home() {
 
       <nav className="sticky top-0 z-50 border-b border-[#ead7cf] bg-[#fff8f5]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="#home" className="leading-tight">
-            <h1 className="text-lg font-bold text-red-600 sm:text-xl">
-              🍁 CareOfCanada
-            </h1>
-            <p className="text-xs text-[#5c4b4b]">Telugu Newcomer Hub</p>
+          <a href="#home" className="flex items-center gap-3 leading-tight">
+            <img
+              src="/brand/careofcanada-nav-logo.png"
+              alt="CareOfCanada"
+              className="h-16 w-16 object-contain"
+            />
+            <div>
+              <h1 className="text-lg font-bold text-red-600 sm:text-xl">
+                CareOfCanada
+              </h1>
+              <p className="text-xs text-[#5c4b4b]">Telugu Newcomer Hub</p>
+            </div>
           </a>
 
           <div className="hidden items-center gap-1 text-sm font-semibold md:flex">
@@ -108,12 +124,10 @@ export default function Home() {
             />
 
             <a
-              href="https://www.instagram.com/mcajith8"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#join-free"
               className="hidden rounded-xl bg-red-600 px-5 py-2 font-semibold text-white shadow-sm transition hover:bg-red-700 hover:shadow-md md:block"
             >
-              Meet Ajith
+              Join Free
             </a>
 
             <button
@@ -197,6 +211,7 @@ export default function Home() {
             </div>
 
             <motion.div
+              id="join-free"
               whileHover={{ y: -4 }}
               className="mx-auto mt-4 max-w-2xl rounded-3xl border border-[#ead7cf] bg-white/80 p-3 text-left shadow-md backdrop-blur lg:mx-0"
             >
@@ -324,6 +339,40 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="tools" className="relative z-10 mx-auto max-w-6xl px-4 py-7 sm:px-6 sm:py-9">
+        <h2 className="mb-5 text-center text-2xl font-bold sm:text-3xl">
+          Tools for your first steps in Canada
+        </h2>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {tools.map(([icon, title, text, href], index) => (
+            <motion.div
+              key={title}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              whileHover={{ y: -6 }}
+              className="rounded-2xl border border-[#ead7cf] bg-white/75 p-5 shadow-sm backdrop-blur hover:shadow-lg"
+            >
+              <div className="mb-3 text-3xl">{icon}</div>
+              <h3 className="text-lg font-bold">{title}</h3>
+              <p className="mt-2 text-sm leading-6 text-[#5c4b4b]">{text}</p>
+
+              {href && (
+                <a
+                  href={href}
+                  className="mt-4 inline-block rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700"
+                >
+                  Open Checklist
+                </a>
+              )}
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       <section className="relative z-10 mx-auto max-w-5xl px-4 py-8 sm:px-6">
         <div className="grid gap-4 text-center sm:grid-cols-3">
           {stats.map(([number, label], index) => (
@@ -344,37 +393,65 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="tools" className="relative z-10 mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
-        <h2 className="mb-8 text-center text-3xl font-bold">
-          Tools for your first steps in Canada
-        </h2>
+      <section id="this-week" className="relative z-10 px-4 py-12 sm:px-6 sm:py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-8 text-center">
+            <p className="text-sm font-semibold text-red-600">
+              Local picks, manually curated
+            </p>
+            <h2 className="mt-2 text-3xl font-bold">
+              This Week for Newcomers 🍁
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl leading-7 text-[#5c4b4b]">
+              Telugu events, newcomer-friendly pop-ups, and useful local things
+              happening around Canada.
+            </p>
+          </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
-          {tools.map(([icon, title, text, href], index) => (
-            <motion.div
-              key={title}
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: index * 0.08 }}
-              whileHover={{ y: -8 }}
-              className="rounded-2xl border border-[#ead7cf] bg-white/75 p-6 shadow-sm backdrop-blur hover:shadow-xl"
-            >
-              <div className="mb-4 text-4xl">{icon}</div>
-              <h3 className="text-xl font-bold">{title}</h3>
-              <p className="mt-2 leading-7 text-[#5c4b4b]">{text}</p>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {thisWeekEvents.map((event, index) => (
+              <motion.article
+                key={event.title}
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                whileHover={{ y: -8 }}
+                className="overflow-hidden rounded-3xl border border-[#ead7cf] bg-white/80 shadow-sm backdrop-blur hover:shadow-xl"
+              >
+                <div className="aspect-[4/5] overflow-hidden bg-[#fff4ef]">
+                  <img
+                    src={event.image}
+                    alt={`${event.title} flyer`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
 
-              {href && (
-                <a
-                  href={href}
-                  className="mt-5 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white hover:bg-red-700"
-                >
-                  Open Checklist
-                </a>
-              )}
-            </motion.div>
-          ))}
+                <div className="p-5">
+                  <p className="text-sm font-semibold text-red-600">
+                    {event.date}
+                  </p>
+                  <h3 className="mt-2 text-xl font-bold">{event.title}</h3>
+                  <p className="mt-2 text-sm font-semibold text-[#5c4b4b]">
+                    📍 {event.location}
+                  </p>
+                  <p className="mt-3 leading-7 text-[#5c4b4b]">
+                    {event.description}
+                  </p>
+
+                  <a
+                    href={event.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-5 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white hover:bg-red-700"
+                  >
+                    WhatsApp for Details
+                  </a>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -359,7 +359,14 @@ export default function CommunityWall() {
             animate="show"
             className="rounded-2xl border border-[#ead7cf] bg-white/75 p-5 shadow-sm backdrop-blur"
           >
-            <h2 className="text-lg font-bold text-red-600">🍁 CareOfCanada</h2>
+            <div className="flex items-center gap-2">
+              <img
+                src="/brand/careofcanada-nav-logo.png"
+                alt="CareOfCanada"
+                className="h-14 w-14 object-contain"
+              />
+              <h2 className="text-lg font-bold text-red-600">CareOfCanada</h2>
+            </div>
             <p className="mt-2 text-sm text-[#5c4b4b]">
               Telugu newcomers helping Telugu newcomers.
             </p>
