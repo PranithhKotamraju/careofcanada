@@ -119,54 +119,48 @@ export default function CommunityWall() {
       animate="show"
       transition={{ duration: 0.5, delay: 0.1 }}
       whileHover={{ y: -4 }}
-      className="mb-5 rounded-3xl border border-[#ead7cf] bg-white/80 p-4 shadow-md backdrop-blur sm:p-5"
+      className="mt-5 rounded-2xl border border-[#ead7cf] bg-white/75 p-5 shadow-sm backdrop-blur"
     >
-      <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
-        <div>
-          <h2 className="text-lg font-bold sm:text-xl">
-            Get Newcomer Tips Weekly 🍁
-          </h2>
-          <p className="mt-2 text-sm leading-6 text-[#5c4b4b]">
-            Jobs, housing, money, and Canada first-step tips. Calm, useful, no
-            spam.
-          </p>
-        </div>
+      <h2 className="font-bold">Get Newcomer Tips Weekly 🍁</h2>
+      <p className="mt-3 text-sm leading-6 text-[#5c4b4b]">
+        Jobs, housing, money, and Canada first-step tips. Calm, useful, no
+        spam.
+      </p>
 
-        {emailSignupSuccess ? (
-          <div className="rounded-2xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
-            Welcome aboard, mowa 🍁 Check your inbox.
-          </div>
-        ) : (
-          <form
-            action={mailerLiteSubscribeUrl}
-            method="post"
-            target="community-mailerlite-signup-frame"
-            onSubmit={() => setEmailSignupSubmitted(true)}
-            className="flex min-w-0 flex-col gap-2 sm:min-w-[360px] sm:flex-row"
+      {emailSignupSuccess ? (
+        <div className="mt-4 rounded-2xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+          Welcome aboard, mowa 🍁 Check your inbox.
+        </div>
+      ) : (
+        <form
+          action={mailerLiteSubscribeUrl}
+          method="post"
+          target="community-mailerlite-signup-frame"
+          onSubmit={() => setEmailSignupSubmitted(true)}
+          className="mt-4 space-y-3"
+        >
+          <label htmlFor="community-email" className="sr-only">
+            Email address
+          </label>
+          <input
+            id="community-email"
+            type="email"
+            name="fields[email]"
+            required
+            autoComplete="email"
+            placeholder="Enter your email"
+            className="w-full rounded-xl border border-[#ead7cf] bg-white px-4 py-3 text-sm text-[#251010] outline-none transition placeholder:text-[#8c7770] focus:border-red-500 focus:ring-2 focus:ring-red-100"
+          />
+          <input type="hidden" name="ml-submit" value="1" />
+          <input type="hidden" name="anticsrf" value="true" />
+          <button
+            type="submit"
+            className="w-full rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
           >
-            <label htmlFor="community-email" className="sr-only">
-              Email address
-            </label>
-            <input
-              id="community-email"
-              type="email"
-              name="fields[email]"
-              required
-              autoComplete="email"
-              placeholder="Enter your email"
-              className="min-w-0 flex-1 rounded-xl border border-[#ead7cf] bg-white px-4 py-3 text-sm text-[#251010] outline-none transition placeholder:text-[#8c7770] focus:border-red-500 focus:ring-2 focus:ring-red-100"
-            />
-            <input type="hidden" name="ml-submit" value="1" />
-            <input type="hidden" name="anticsrf" value="true" />
-            <button
-              type="submit"
-              className="rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
-            >
-              Join Free
-            </button>
-          </form>
-        )}
-      </div>
+            Join Free
+          </button>
+        </form>
+      )}
 
       <iframe
         name="community-mailerlite-signup-frame"
@@ -385,6 +379,8 @@ export default function CommunityWall() {
               </a>
             </nav>
           </motion.div>
+
+          {emailSignupCard}
         </aside>
 
         <div className="min-w-0">
@@ -507,8 +503,6 @@ export default function CommunityWall() {
               </div>
             </form>
           </motion.div>
-
-          {emailSignupCard}
 
           <motion.div
             variants={fadeUp}
