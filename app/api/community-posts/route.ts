@@ -6,6 +6,20 @@ const emailPattern = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;
 const linkPattern =
   /\b(?:https?:\/\/|www\.|[a-z0-9-]+\.(?:com|ca|org|net|io|co|me|info|biz)(?:\/|\b))/i;
 const phonePattern = /\+?\d[\d\s().-]{6,}\d/;
+const profanityPatterns = [
+  "fuck",
+  "fucking",
+  "fucker",
+  "shit",
+  "bullshit",
+  "bitch",
+  "bastard",
+  "asshole",
+  "dick",
+  "pussy",
+  "cunt",
+  "motherfucker",
+];
 
 function containsBlockedContent(value: string) {
   return (
@@ -13,6 +27,25 @@ function containsBlockedContent(value: string) {
     linkPattern.test(value) ||
     phonePattern.test(value)
   );
+}
+
+function normalizeForModeration(value: string) {
+  return value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[@]/g, "a")
+    .replace(/[!1|]/g, "i")
+    .replace(/[$5]/g, "s")
+    .replace(/[0]/g, "o")
+    .replace(/[3]/g, "e")
+    .replace(/[^a-z]/g, "");
+}
+
+function containsProfanity(value: string) {
+  const normalized = normalizeForModeration(value);
+
+  return profanityPatterns.some((word) => normalized.includes(word));
 }
 
 function errorResponse(message: string, status: number) {
@@ -142,6 +175,10 @@ export async function POST(request: Request) {
         "Links, email addresses, and phone numbers are not allowed.",
         400,
       );
+    }
+
+    if (containsProfanity(`${name} ${city} ${message}`)) {
+      return errorResponse("Please keep it respectful, mowa.", 400);
     }
 
     const ipHash = await hashValue(getClientIp(request));
