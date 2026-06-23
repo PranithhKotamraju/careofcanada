@@ -1,5 +1,6 @@
 "use client";
 
+import GuidanceCallCard from "@/components/GuidanceCallCard";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -35,6 +36,7 @@ const navLinks = [
   ["Resources", "#resources"],
   ["Videos", "#videos"],
   ["Community 🍁127", "/community"],
+  ["1:1 Call", "#guidance-call"],
   ["Partners", "/community-partners"],
   ["About", "#about"],
 ];
@@ -58,8 +60,13 @@ const resources = [
   ["Money Basics", "Budgeting, credit score and survival cost basics."],
 ];
 
+const mailerLiteSubscribeUrl =
+  "https://assets.mailerlite.com/jsonp/2461634/forms/190924753687545174/subscribe";
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [emailSignupSubmitted, setEmailSignupSubmitted] = useState(false);
+  const [emailSignupSuccess, setEmailSignupSuccess] = useState(false);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-[#251010]">
@@ -145,7 +152,7 @@ export default function Home() {
         )}
       </nav>
 
-      <section id="home" className="relative z-10 px-4 py-10 sm:px-6 sm:py-14">
+      <section id="home" className="relative z-10 px-4 py-7 sm:px-6 sm:py-10">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <img src="/images/cocaj.jpg" alt="" className="w-[850px] opacity-[0.04]" />
         </div>
@@ -158,18 +165,18 @@ export default function Home() {
             transition={{ duration: 0.55 }}
             className="text-center lg:text-left"
           >
-            <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            <h2 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
               The Telugu Newcomer Hub 🇨🇦
               <span className="block text-red-600">
                 Jobs. Housing. Money. Community.
               </span>
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-[#5c4b4b] lg:mx-0">
+            <p className="mx-auto mt-3 max-w-2xl text-lg leading-7 text-[#5c4b4b] lg:mx-0">
               Everything you need to start your Canada journey.
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
               <motion.a
                 whileHover={{ y: -3 }}
                 whileTap={{ scale: 0.97 }}
@@ -191,11 +198,69 @@ export default function Home() {
 
             <motion.div
               whileHover={{ y: -4 }}
-              className="mx-auto mt-6 max-w-lg rounded-2xl border border-[#ead7cf] bg-white/80 p-5 shadow-md backdrop-blur lg:mx-0"
+              className="mx-auto mt-4 max-w-2xl rounded-3xl border border-[#ead7cf] bg-white/80 p-3 text-left shadow-md backdrop-blur lg:mx-0"
             >
-              <h3 className="text-2xl font-bold">Join the Community 🇨🇦</h3>
-              <p className="mt-2 text-[#5c4b4b]">Jobs. Money. Settlement.</p>
-              <div className="ml-embedded mt-5" data-form="QVxZ18"></div>
+              <div className="grid gap-3 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+                <div className="p-3 md:p-4">
+                  <h3 className="text-2xl font-bold">Join the Community 🇨🇦</h3>
+                  <p className="mt-2 text-[#5c4b4b]">
+                    Weekly newcomer tips on jobs, housing, money, and first
+                    steps in Canada.
+                  </p>
+
+                  {emailSignupSuccess ? (
+                    <div className="mt-4 rounded-2xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+                      Welcome aboard, mowa 🍁 Check your inbox.
+                    </div>
+                  ) : (
+                    <form
+                      action={mailerLiteSubscribeUrl}
+                      method="post"
+                      target="mailerlite-signup-frame"
+                      onSubmit={() => setEmailSignupSubmitted(true)}
+                      className="mt-4 flex flex-col gap-2 sm:flex-row"
+                    >
+                      <label htmlFor="homepage-email" className="sr-only">
+                        Email address
+                      </label>
+                      <input
+                        id="homepage-email"
+                        type="email"
+                        name="fields[email]"
+                        required
+                        autoComplete="email"
+                        placeholder="Enter your email"
+                        className="min-w-0 flex-1 rounded-xl border border-[#ead7cf] bg-white px-4 py-3 text-sm text-[#251010] outline-none transition placeholder:text-[#8c7770] focus:border-red-500 focus:ring-2 focus:ring-red-100"
+                      />
+                      <input type="hidden" name="ml-submit" value="1" />
+                      <input type="hidden" name="anticsrf" value="true" />
+                      <button
+                        type="submit"
+                        className="rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
+                      >
+                        Join Free
+                      </button>
+                    </form>
+                  )}
+
+                  <iframe
+                    name="mailerlite-signup-frame"
+                    title="CareOfCanada email signup"
+                    className="hidden"
+                    onLoad={() => {
+                      if (emailSignupSubmitted) {
+                        setEmailSignupSuccess(true);
+                      }
+                    }}
+                  />
+                </div>
+
+                <GuidanceCallCard
+                  id="guidance-call"
+                  compact
+                  className="text-left shadow-[0_14px_28px_rgba(220,38,38,0.12)]"
+                />
+              </div>
             </motion.div>
           </motion.div>
 
