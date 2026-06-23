@@ -27,7 +27,7 @@ type CommunityStats = {
   streak: number;
 };
 
-const filters = ["All", "Wins", "Questions", "Housing", "Jobs"];
+const filters = ["All", "Wins", "Questions", "Housing", "Jobs", "Travel"];
 const dailyPrompts = [
   "What surprised you about Canada today?",
   "Share one small win from your week.",
@@ -181,6 +181,7 @@ export default function CommunityWall() {
     if (activeFilter === "Questions") return post.category === "Question ❓";
     if (activeFilter === "Housing") return post.category === "Housing 🏠";
     if (activeFilter === "Jobs") return post.category === "Jobs 💼";
+    if (activeFilter === "Travel") return post.category === "Travel ✈️";
     return true;
   });
 
@@ -469,6 +470,7 @@ export default function CommunityWall() {
                   <option>Question ❓</option>
                   <option>Housing 🏠</option>
                   <option>Jobs 💼</option>
+                  <option>Travel ✈️</option>
                 </select>
               </div>
 
@@ -495,7 +497,7 @@ export default function CommunityWall() {
               <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <p className="text-sm leading-5 text-[#5c4b4b]">
                   {formMessage ||
-                    "No links, phone numbers, emails, or spam."}
+                    "No links, phone numbers, emails, or spam. Travel posts: no passport, ticket, or exact personal details."}
                 </p>
 
                 <motion.button
@@ -654,6 +656,7 @@ export default function CommunityWall() {
             <div className="mt-4 space-y-2 text-sm text-red-100/75">
               <p>Be respectful.</p>
               <p>No links or phone numbers.</p>
+              <p>No passport or ticket details.</p>
               <p>No spam.</p>
               <p>Help newcomers.</p>
             </div>

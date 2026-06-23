@@ -1,6 +1,12 @@
 import { getSupabase } from "@/lib/supabase";
 
-const categories = ["Win 🎉", "Question ❓", "Housing 🏠", "Jobs 💼"] as const;
+const categories = [
+  "Win 🎉",
+  "Question ❓",
+  "Housing 🏠",
+  "Jobs 💼",
+  "Travel ✈️",
+] as const;
 
 const emailPattern = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i;
 const linkPattern =

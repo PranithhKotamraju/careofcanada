@@ -16,6 +16,14 @@ anonymous visitors to:
 New `"Win 🎉"` posts receive 15 Maple Points. Every other allowed category
 receives 10 Maple Points.
 
+Allowed categories are:
+
+- `Win 🎉`
+- `Question ❓`
+- `Housing 🏠`
+- `Jobs 💼`
+- `Travel ✈️`
+
 ## 2. Configure environment variables
 
 Create `.env.local` in the project root:
@@ -37,10 +45,11 @@ Clean posts are saved with `approved = true` and appear immediately. Submissions
 are limited to three per IP address every ten minutes, and duplicate messages
 are blocked for 24 hours.
 
-The API rejects messages over 300 characters and submissions containing links,
-email addresses, or phone numbers. The database also enforces the message
-length, allowed categories, Maple Point values, blocked-content rules, rate
-limits, and duplicate protection.
+The API rejects messages over 300 characters, profanity, and submissions
+containing links, email addresses, or phone numbers. The database also enforces
+the message length, allowed categories, Maple Point values, blocked-content
+rules, rate limits, and duplicate protection. Travel posts should not include
+passport, ticket, phone, or exact personal details.
 
 Maple Cheers do not add Maple Points. They are lightweight appreciation, limited
 to one Cheer per browser per post.
