@@ -201,7 +201,7 @@ export default function Home() {
           <img src="/images/cocaj.jpg" alt="" className="w-[850px] opacity-[0.04]" />
         </div>
 
-        <div className="relative z-10 mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_360px]">
+        <div className="relative z-10 mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[1fr_390px]">
           <motion.div
             variants={fadeUp}
             initial="hidden"
@@ -308,69 +308,76 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="mx-auto mt-4 grid max-w-2xl gap-3 md:grid-cols-2 lg:mx-0">
+          </motion.div>
+
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 28, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              whileHover={{ y: -5 }}
+              className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] p-4 text-white shadow-[0_18px_44px_rgba(220,38,38,0.16)]"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-sm font-semibold text-red-400">
+                    Community Preview 🍁
+                  </p>
+                  <h3 className="mt-1 text-2xl font-bold">
+                    Telugu Newcomer Wall
+                  </h3>
+                </div>
+
+                <span className="shrink-0 rounded-full bg-red-600 px-3 py-1 text-sm font-semibold">
+                  127 members
+                </span>
+              </div>
+
+              <div className="mt-4 space-y-3">
+                {communityPreviewPosts.slice(0, 2).map((post, index) => (
+                  <motion.div
+                    key={post.name}
+                    initial={{ opacity: 0, x: 18 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.25 + index * 0.1 }}
+                    whileHover={{ x: 4 }}
+                    className="rounded-2xl border border-red-900/40 bg-[#1b0f0f] p-3"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 font-bold">
+                        {post.name.charAt(0)}
+                      </div>
+
+                      <div>
+                        <p className="font-semibold">{post.name}</p>
+                        <p className="text-xs text-red-100/60">{post.city}</p>
+                      </div>
+                    </div>
+
+                    <p className="mt-3 text-sm leading-6 text-red-50">
+                      {post.text}
+                    </p>
+
+                    <p className="mt-2 text-sm text-red-400">
+                      🍁 {post.points} Maple Points
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              <a
+                href="/community"
+                className="mt-4 block rounded-xl bg-red-600 px-5 py-2.5 text-center font-semibold text-white hover:bg-red-700"
+              >
+                View Community Wall
+              </a>
+            </motion.div>
+
+            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
               <WhatsAppCommunityCard compact className="h-full" />
               <CommunityMissionBanner className="mt-0 h-full max-w-none" />
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 28, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            whileHover={{ y: -6 }}
-            className="rounded-3xl border border-red-900/40 bg-gradient-to-b from-[#3a1515] via-[#251010] to-[#140909] p-5 text-white shadow-[0_20px_50px_rgba(220,38,38,0.18)]"
-          >
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-sm font-semibold text-red-400">
-                  Community Preview 🍁
-                </p>
-                <h3 className="mt-2 text-2xl font-bold">Telugu Newcomer Wall</h3>
-              </div>
-
-              <span className="shrink-0 rounded-full bg-red-600 px-3 py-1 text-sm font-semibold">
-                127 members
-              </span>
-            </div>
-
-            <div className="mt-4 space-y-3">
-              {communityPreviewPosts.map((post, index) => (
-                <motion.div
-                  key={post.name}
-                  initial={{ opacity: 0, x: 18 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.25 + index * 0.1 }}
-                  whileHover={{ x: 4 }}
-                  className="rounded-2xl border border-red-900/40 bg-[#1b0f0f] p-4"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-red-600 font-bold">
-                      {post.name.charAt(0)}
-                    </div>
-
-                    <div>
-                      <p className="font-semibold">{post.name}</p>
-                      <p className="text-xs text-red-100/60">{post.city}</p>
-                    </div>
-                  </div>
-
-                  <p className="mt-3 text-sm leading-6 text-red-50">{post.text}</p>
-
-                  <p className="mt-3 text-sm text-red-400">
-                    🍁 {post.points} Maple Points
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            <a
-              href="/community"
-              className="mt-4 block rounded-xl bg-red-600 px-5 py-3 text-center font-semibold text-white hover:bg-red-700"
-            >
-              View Community Wall
-            </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
