@@ -99,6 +99,11 @@ const latestReels = [
     description: "12-month rule and new priority jobs explained in a quick reel.",
     href: "https://www.instagram.com/reel/DU6chiEEp5O/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   },
+  {
+    title: "US to Canada PR Draws Hint",
+    description: "A quick look at why some education courses may be safer for PR planning.",
+    href: "https://www.instagram.com/reel/DUQ9h0QD8O9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
 ];
 
 const mailerLiteSubscribeUrl =
