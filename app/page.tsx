@@ -1,6 +1,10 @@
 "use client";
 
 import GuidanceCallCard from "@/components/GuidanceCallCard";
+import CostCalculator from "@/components/CostCalculator";
+import JobTracker from "@/components/JobTracker";
+import BenefitsGuide from "@/components/BenefitsGuide";
+import CommunityMissionBanner from "@/components/CommunityMissionBanner";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -33,6 +37,8 @@ const communityPreviewPosts = [
 const navLinks = [
   ["Start Here", "/first-30-days"],
   ["Tools", "#tools"],
+  ["Benefits", "#benefits"],
+  ["Resources", "#resources"],
   ["Community 🍁127", "/community"],
   ["Talent Hub", "/talent-hub"],
   ["This Week", "#this-week"],
@@ -47,15 +53,31 @@ const stats = [
 
 const tools = [
   ["📋", "First 30 Days Checklist", "SIN, bank account, phone plan, health card, resume and basic setup.", "/first-30-days"],
-  ["💰", "Cost Calculator", "Estimate rent, groceries, phone, transit and monthly survival cost.", ""],
-  ["💼", "Job Tracker", "Track job applications, interview status and follow-up dates.", ""],
+  ["💰", "Cost Calculator", "Estimate rent, groceries, phone, transit and monthly survival cost.", "#cost-calculator"],
+  ["💼", "Job Tracker", "Track job applications, interview status and follow-up dates.", "#job-tracker"],
 ];
 
 const resources = [
-  ["Resume Template", "Simple Canadian-style resume guidance for newcomers."],
-  ["Interview Questions", "Common questions and calm preparation tips."],
-  ["Newcomer Links", "Important official links for first 30–60 days."],
-  ["Money Basics", "Budgeting, credit score and survival cost basics."],
+  [
+    "Resume Template",
+    "Simple Canadian-style resume guidance for newcomers.",
+    "/resources/resume-template",
+  ],
+  [
+    "Interview Questions",
+    "Common questions and calm preparation tips.",
+    "/resources/interview-questions",
+  ],
+  [
+    "Newcomer Links",
+    "Important official links for first 30–60 days.",
+    "/resources/newcomer-links",
+  ],
+  [
+    "Money Basics",
+    "Budgeting, credit score and survival cost basics.",
+    "/resources/money-basics",
+  ],
 ];
 
 const thisWeekEvents = [
@@ -117,13 +139,6 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-3">
-            <motion.img
-              whileHover={{ scale: 1.08, rotate: 2 }}
-              src="/images/aj4.png"
-              alt="Ajith"
-              className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
-            />
-
             <a
               href="#join-free"
               className="hidden rounded-xl bg-red-600 px-5 py-2 font-semibold text-white shadow-sm transition hover:bg-red-700 hover:shadow-md md:block"
@@ -278,6 +293,8 @@ export default function Home() {
                 />
               </div>
             </motion.div>
+
+            <CommunityMissionBanner />
           </motion.div>
 
           <motion.div
@@ -366,12 +383,19 @@ export default function Home() {
                   href={href}
                   className="mt-4 inline-block rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700"
                 >
-                  Open Checklist
+                  {title === "Cost Calculator"
+                    ? "Open Calculator"
+                    : title === "Job Tracker"
+                      ? "Open Tracker"
+                      : "Open Checklist"}
                 </a>
               )}
             </motion.div>
           ))}
         </div>
+
+        <CostCalculator />
+        <JobTracker />
       </section>
 
       <section className="relative z-10 mx-auto max-w-5xl px-4 py-8 sm:px-6">
@@ -393,6 +417,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <BenefitsGuide />
 
       <section id="this-week" className="relative z-10 px-4 py-12 sm:px-6 sm:py-16">
         <div className="mx-auto max-w-6xl">
@@ -461,20 +487,24 @@ export default function Home() {
           <h2 className="mb-8 text-center text-3xl font-bold">Free Resources</h2>
 
           <div className="grid gap-5 md:grid-cols-2">
-            {resources.map(([title, text], index) => (
-              <motion.div
+            {resources.map(([title, text, href], index) => (
+              <motion.a
                 key={title}
+                href={href}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.06 }}
                 whileHover={{ y: -5 }}
-                className="rounded-2xl border border-[#ead7cf] bg-white/80 p-6 shadow-sm hover:shadow-lg"
+                className="group rounded-2xl border border-[#ead7cf] bg-white/80 p-6 shadow-sm transition hover:border-red-200 hover:shadow-lg"
               >
                 <h3 className="text-xl font-bold">{title}</h3>
                 <p className="mt-2 leading-7 text-[#5c4b4b]">{text}</p>
-              </motion.div>
+                <span className="mt-4 inline-flex text-sm font-semibold text-red-600 transition group-hover:translate-x-1">
+                  Open resource →
+                </span>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -524,34 +554,24 @@ export default function Home() {
           transition={{ duration: 0.55 }}
           className="mx-auto max-w-4xl rounded-3xl border border-[#ead7cf] bg-white/60 p-6 shadow-sm backdrop-blur sm:p-10"
         >
-          <motion.img
-            whileHover={{ scale: 1.06, rotate: 2 }}
-            src="/images/aj4.png"
-            alt="Ajith"
-            className="mx-auto mb-7 h-32 w-32 rounded-full border-4 border-white object-cover shadow-xl"
-          />
-
           <h2 className="text-3xl font-bold sm:text-4xl">
-            The Story Behind CareOfCanada 🇨🇦
+            Why CareOfCanada Exists 🇨🇦
           </h2>
-
-          <p className="mt-6 text-lg">Namaste mowa 👋</p>
 
           <div className="mx-auto mt-6 max-w-3xl space-y-5 text-lg leading-8 text-[#251010] sm:text-xl">
             <p>
-              I'm Ajith — a software engineer, Telugu rapper, content creator,
-              husband, father, and fellow immigrant building a life in Canada.
+              CareOfCanada was created to make the first steps in Canada feel
+              less confusing for Telugu newcomers.
             </p>
 
             <p>
-              From memes and music to newcomer guidance, I've always enjoyed
-              creating content that helps people, makes them smile, and keeps
-              things real.
+              Jobs, housing, money, benefits, community, and guidance — all in
+              one calm place.
             </p>
 
             <p>
-              That's why I started CareOfCanada — a place where Telugu newcomers
-              can find practical guidance on jobs, money, settlement, and everyday life in Canada.
+              Built by a fellow immigrant who understands how overwhelming the
+              first few months can feel.
             </p>
           </div>
 
@@ -564,12 +584,10 @@ export default function Home() {
           </p>
 
           <a
-            href="https://www.instagram.com/mcajith8"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#join-free"
             className="mt-8 inline-block rounded-xl bg-red-600 px-6 py-3 font-semibold text-white hover:bg-red-700"
           >
-            Connect With Ajith
+            Join the Community
           </a>
         </motion.div>
       </section>

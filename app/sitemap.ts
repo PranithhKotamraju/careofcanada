@@ -15,6 +15,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: 'https://careofcanada.ca/resources/resume-template',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://careofcanada.ca/resources/interview-questions',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://careofcanada.ca/resources/newcomer-links',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://careofcanada.ca/resources/money-basics',
+      lastModified: new Date(),
+    },
+    {
       url: 'https://careofcanada.ca/videos',
       lastModified: new Date(),
     },

@@ -334,6 +334,10 @@ export default function TalentHub() {
           ))}
         </div>
 
+        <p className="mt-2 text-sm leading-6 text-[#5c4b4b]">
+          Maple Verified profiles are manually reviewed by CareOfCanada.
+        </p>
+
         <section className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {visibleTalents.map((talent, index) => (
             <motion.article
