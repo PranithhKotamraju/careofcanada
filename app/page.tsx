@@ -303,8 +303,10 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <WhatsAppCommunityCard compact className="mx-auto mt-4 max-w-2xl lg:mx-0" />
-            <CommunityMissionBanner />
+            <div className="mx-auto mt-4 grid max-w-2xl gap-3 md:grid-cols-2 lg:mx-0">
+              <WhatsAppCommunityCard compact className="h-full" />
+              <CommunityMissionBanner className="mt-0 h-full max-w-none" />
+            </div>
           </motion.div>
 
           <motion.div

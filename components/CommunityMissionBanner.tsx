@@ -2,16 +2,22 @@
 
 import { motion } from "framer-motion";
 
-export default function CommunityMissionBanner() {
+type CommunityMissionBannerProps = {
+  className?: string;
+};
+
+export default function CommunityMissionBanner({
+  className = "",
+}: CommunityMissionBannerProps) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.12 }}
       whileHover={{ y: -3 }}
-      className="mx-auto mt-3 max-w-2xl overflow-hidden rounded-2xl border border-red-900/30 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] text-left text-white shadow-[0_10px_22px_rgba(220,38,38,0.12)] lg:mx-0"
+      className={`mx-auto mt-3 max-w-2xl overflow-hidden rounded-2xl border border-red-900/30 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] text-left text-white shadow-[0_10px_22px_rgba(220,38,38,0.12)] lg:mx-0 ${className}`}
     >
-      <div className="relative flex flex-col gap-2.5 p-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="relative flex h-full flex-col gap-2.5 p-3 sm:flex-row sm:items-center sm:justify-between lg:flex-col lg:items-start">
         <div className="absolute right-4 top-2 hidden text-4xl leading-none opacity-10 sm:block">
           🍁
         </div>
@@ -34,16 +40,16 @@ export default function CommunityMissionBanner() {
           </p>
         </div>
 
-        <div className="relative z-10 flex shrink-0 flex-col gap-2 sm:flex-row">
+        <div className="relative z-10 flex shrink-0 flex-col gap-2 sm:flex-row lg:w-full">
             <a
               href="/community"
-              className="rounded-xl bg-red-600 px-3 py-1.5 text-center text-xs font-semibold text-white transition hover:bg-red-700 sm:text-sm"
+              className="rounded-xl bg-red-600 px-3 py-1.5 text-center text-xs font-semibold text-white transition hover:bg-red-700 sm:text-sm lg:flex-1"
             >
               Open Community
             </a>
             <a
               href="#tools"
-              className="rounded-xl border border-yellow-200/35 bg-white/10 px-3 py-1.5 text-center text-xs font-semibold text-yellow-100 transition hover:bg-white/15 sm:text-sm"
+              className="rounded-xl border border-yellow-200/35 bg-white/10 px-3 py-1.5 text-center text-xs font-semibold text-yellow-100 transition hover:bg-white/15 sm:text-sm lg:flex-1"
             >
               Use Tools
             </a>
