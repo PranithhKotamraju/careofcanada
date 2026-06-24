@@ -382,6 +382,9 @@ export default function CommunityWall() {
               <a href="/community" className="block rounded-lg bg-red-600 px-3 py-2 text-white">
                 Community
               </a>
+              <a href="/talent-hub" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
+                Talent Hub
+              </a>
               <a href="/community-partners" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
                 Partners
               </a>

@@ -34,6 +34,7 @@ const navLinks = [
   ["Start Here", "/first-30-days"],
   ["Tools", "#tools"],
   ["Community 🍁127", "/community"],
+  ["Talent Hub", "/talent-hub"],
   ["This Week", "#this-week"],
   ["1:1 Call", "#guidance-call"],
 ];

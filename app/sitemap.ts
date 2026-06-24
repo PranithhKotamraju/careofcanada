@@ -18,5 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: 'https://careofcanada.ca/videos',
       lastModified: new Date(),
     },
+    {
+      url: 'https://careofcanada.ca/talent-hub',
+      lastModified: new Date(),
+    },
   ]
 }
