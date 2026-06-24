@@ -4,7 +4,6 @@ import GuidanceCallCard from "@/components/GuidanceCallCard";
 import CostCalculator from "@/components/CostCalculator";
 import JobTracker from "@/components/JobTracker";
 import BenefitsGuide from "@/components/BenefitsGuide";
-import CommunityMissionBanner from "@/components/CommunityMissionBanner";
 import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -373,10 +372,7 @@ export default function Home() {
               </a>
             </motion.div>
 
-            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              <WhatsAppCommunityCard compact className="h-full" />
-              <CommunityMissionBanner className="mt-0 h-full max-w-none" />
-            </div>
+            <WhatsAppCommunityCard compact className="mt-3" />
           </div>
         </div>
       </section>
