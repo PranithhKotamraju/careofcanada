@@ -1,4 +1,6 @@
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 type ResourceSection = {
   title: string;
@@ -32,6 +34,10 @@ export default function ResourcePage({
 }: ResourcePageProps) {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] px-4 py-8 text-[#251010] sm:px-6">
+      <div className="-mx-4 -mt-8 mb-8 sm:-mx-6">
+        <SiteHeader />
+      </div>
+
       <div className="mx-auto max-w-5xl">
         <Link
           href="/#resources"
@@ -104,6 +110,10 @@ export default function ResourcePage({
             </div>
           </section>
         )}
+      </div>
+
+      <div className="-mx-4 -mb-8 mt-12 sm:-mx-6">
+        <SiteFooter />
       </div>
     </main>
   );

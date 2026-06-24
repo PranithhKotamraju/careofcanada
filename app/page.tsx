@@ -5,6 +5,8 @@ import CostCalculator from "@/components/CostCalculator";
 import JobTracker from "@/components/JobTracker";
 import BenefitsGuide from "@/components/BenefitsGuide";
 import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -32,17 +34,6 @@ const communityPreviewPosts = [
     text: "Passed my G2 today 🚗",
     points: 80,
   },
-];
-
-const navLinks = [
-  ["Start Here", "/first-30-days"],
-  ["Tools", "#tools"],
-  ["Benefits", "#benefits"],
-  ["Resources", "#resources"],
-  ["Community 🍁127", "/community"],
-  ["Talent Hub", "/talent-hub"],
-  ["This Week", "#this-week"],
-  ["1:1 Call", "#guidance-call"],
 ];
 
 const stats = [
@@ -109,7 +100,6 @@ const mailerLiteSubscribeUrl =
   "https://assets.mailerlite.com/jsonp/2461634/forms/190924753687545174/subscribe";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [emailSignupSubmitted, setEmailSignupSubmitted] = useState(false);
   const [emailSignupSuccess, setEmailSignupSuccess] = useState(false);
 
@@ -119,81 +109,7 @@ export default function Home() {
       <div className="pointer-events-none absolute right-[-140px] top-[520px] h-96 w-96 rounded-full bg-orange-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-80 left-[-140px] h-96 w-96 rounded-full bg-red-100/70 blur-3xl" />
 
-      <nav className="sticky top-0 z-50 border-b border-[#ead7cf] bg-[#fff8f5]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="#home" className="flex items-center gap-3 leading-tight">
-            <img
-              src="/brand/careofcanada-nav-logo.png"
-              alt="CareOfCanada"
-              className="h-16 w-16 object-contain"
-            />
-            <div>
-              <h1 className="text-lg font-bold text-red-600 sm:text-xl">
-                CareOfCanada
-              </h1>
-              <p className="text-xs text-[#5c4b4b]">Telugu Newcomer Hub</p>
-            </div>
-          </a>
-
-          <div className="hidden items-center gap-1 text-sm font-semibold md:flex">
-            {navLinks.map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className={`rounded-full px-4 py-2 transition ${
-                  label.includes("Community")
-                    ? "bg-red-50 text-red-600"
-                    : "text-[#3a1515] hover:bg-red-50 hover:text-red-600"
-                }`}
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <a
-              href="#join-free"
-              className="hidden rounded-xl bg-red-600 px-5 py-2 font-semibold text-white shadow-sm transition hover:bg-red-700 hover:shadow-md md:block"
-            >
-              Join Free
-            </a>
-
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-3xl md:hidden"
-              aria-label="Open menu"
-            >
-              ☰
-            </button>
-          </div>
-        </div>
-
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="border-t border-[#ead7cf] bg-[#fff8f5] px-4 py-4 md:hidden"
-          >
-            <div className="flex flex-col gap-2 text-sm font-semibold">
-              {navLinks.map(([label, href]) => (
-                <a
-                  key={label}
-                  href={href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`rounded-xl px-4 py-3 ${
-                    label.includes("Community")
-                      ? "bg-red-600 text-white"
-                      : "hover:bg-red-50"
-                  }`}
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </nav>
+      <SiteHeader />
 
       <section id="home" className="relative z-10 px-4 py-7 sm:px-6 sm:py-10">
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
@@ -209,14 +125,15 @@ export default function Home() {
             className="text-center lg:text-left"
           >
             <h2 className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl">
-              The Telugu Newcomer Hub 🇨🇦
+              The Telugu Community Hub in Canada 🇨🇦
               <span className="block text-red-600">
-                Jobs. Housing. Money. Community.
+                Jobs. Housing. Money. Events. People.
               </span>
             </h2>
 
             <p className="mx-auto mt-3 max-w-2xl text-lg leading-7 text-[#5c4b4b] lg:mx-0">
-              Everything you need to start your Canada journey.
+              Everything Telugu people need to build life in Canada —
+              newcomer-friendly, community-first.
             </p>
 
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
@@ -586,7 +503,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="videos" className="relative z-10 mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 sm:py-16">
+      <section id="updates" className="relative z-10 mx-auto max-w-5xl px-4 py-12 text-center sm:px-6 sm:py-16">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -636,13 +553,13 @@ export default function Home() {
 
           <div className="mx-auto mt-6 max-w-3xl space-y-5 text-lg leading-8 text-[#251010] sm:text-xl">
             <p>
-              CareOfCanada was created to make the first steps in Canada feel
-              less confusing for Telugu newcomers.
+              CareOfCanada was created to make Canada life feel less confusing
+              for Telugu people building their next chapter here.
             </p>
 
             <p>
-              Jobs, housing, money, benefits, community, and guidance — all in
-              one calm place.
+              Jobs, housing, money, benefits, events, talent, community, and
+              guidance — all in one calm place.
             </p>
 
             <p>
@@ -651,12 +568,16 @@ export default function Home() {
             </p>
           </div>
 
+          <p className="mt-7 font-serif text-2xl italic tracking-wide text-red-700">
+            — MC Ajith
+          </p>
+
           <h3 className="mt-8 text-3xl font-bold">
-            Jobs. Housing. Money. Community.
+            Jobs. Housing. Money. Events. People.
           </h3>
 
           <p className="mt-3 text-lg text-[#5c4b4b]">
-            Everything you need to start your Canada journey.
+            Your Telugu community home in Canada.
           </p>
 
           <a
@@ -668,28 +589,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <footer className="relative z-10 border-t border-[#ead7cf] px-4 py-8 text-center text-sm text-[#5c4b4b]">
-        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <span>© 2026 CareOfCanada • The Telugu Newcomer Hub 🇨🇦</span>
-          <span className="hidden text-[#c9aaa0] sm:inline">•</span>
-          <a
-            href="https://chat.whatsapp.com/FofHnslAO2IGQ0oJysYWrG?mode=gi_t"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-green-700 hover:text-green-800"
-          >
-            WhatsApp
-          </a>
-          <a
-            href="https://www.instagram.com/careofcanada"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-red-600 hover:text-red-700"
-          >
-            Instagram
-          </a>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

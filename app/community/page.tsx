@@ -2,6 +2,8 @@
 
 import GuidanceCallCard from "@/components/GuidanceCallCard";
 import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
@@ -340,6 +342,7 @@ export default function CommunityWall() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-[#251010]">
+      <SiteHeader active="Community" />
       <div className="pointer-events-none absolute left-1/2 top-20 h-80 w-80 -translate-x-1/2 rounded-full bg-red-200/40 blur-3xl" />
       <div className="pointer-events-none absolute right-[-140px] top-[420px] h-96 w-96 rounded-full bg-orange-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-20 left-[-140px] h-96 w-96 rounded-full bg-red-100/70 blur-3xl" />
@@ -370,7 +373,7 @@ export default function CommunityWall() {
               <h2 className="text-lg font-bold text-red-600">CareOfCanada</h2>
             </div>
             <p className="mt-2 text-sm text-[#5c4b4b]">
-              Telugu newcomers helping Telugu newcomers.
+              Telugu community helping Telugu community.
             </p>
 
             <nav className="mt-6 space-y-2 text-sm font-semibold">
@@ -668,6 +671,8 @@ export default function CommunityWall() {
           </motion.div>
         </aside>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }

@@ -1,4 +1,5 @@
-export {};
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const steps = [
     {
@@ -77,8 +78,9 @@ const steps = [
   
   export default function First30Days() {
     return (
-      <main className="min-h-screen bg-white px-6 py-12 text-gray-900">
-        <section className="mx-auto max-w-5xl">
+      <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-gray-900">
+        <SiteHeader active="Start" />
+        <section className="mx-auto max-w-5xl px-6 py-12">
           <a
             href="/"
             className="mb-8 inline-block rounded-xl border px-5 py-3 font-semibold"
@@ -160,6 +162,7 @@ const steps = [
             government websites for the latest rules and requirements.
           </p>
         </section>
+        <SiteFooter />
       </main>
     );
   }

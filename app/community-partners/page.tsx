@@ -1,6 +1,10 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+
 export default function CommunityPartners() {
     return (
       <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-[#251010]">
+        <SiteHeader active="Local Picks" />
         <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-14">
           <a
             href="/"
@@ -15,16 +19,16 @@ export default function CommunityPartners() {
             </p>
   
             <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-              Community Partners
+              Local Picks
             </h1>
   
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#5c4b4b] sm:text-lg">
-              Professionals and businesses helping Telugu newcomers settle, grow,
-              and build a life in Canada.
+              Real people, events, and services helping the Telugu community
+              build life in Canada.
             </p>
   
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {["🏡 Realtor", "🍕 Food", "💼 Accountant", "🏠 Mortgage", "🚗 Driving School"].map(
+              {["🏡 Realtor", "📸 Photography", "🍛 Food & Catering", "🎪 Events", "🚗 Driving School"].map(
                 (item) => (
                   <span
                     key={item}
@@ -79,8 +83,8 @@ export default function CommunityPartners() {
   
             <div className="rounded-3xl border border-[#ead7cf] bg-white/80 p-6 shadow-md backdrop-blur-sm transition hover:-translate-y-1 hover:shadow-xl">
               <img
-                src="/images/pizzapizza.png"
-                alt="Pizza Pizza Toronto"
+                src="/images/womb-to-world-hanu.png"
+                alt="Womb to World Moment Capture"
                 className="h-40 w-full rounded-2xl object-cover shadow-md"
               />
   
@@ -88,32 +92,32 @@ export default function CommunityPartners() {
                 Verified Community Partner
               </p>
   
-              <h2 className="mt-2 text-2xl font-bold">🍕 Food & Catering</h2>
+              <h2 className="mt-2 text-2xl font-bold">📸 Photography</h2>
   
               <h3 className="mt-2 text-xl font-semibold">
-                Bala Chandrudu Gara
+                Womb to World Moment Capture
               </h3>
   
               <p className="mt-3 leading-7 text-[#5c4b4b]">
-                Pizza Pizza, Toronto. A proud friend of the Telugu community and
-                supporter of CareOfCanada.
+                In-home newborn, lifestyle, maternity, birth, and family
+                photography across the GTA.
               </p>
   
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="tel:4169671111"
+                  href="https://www.instagram.com/wombtoworldmomentcapture/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="rounded-xl bg-red-600 px-5 py-3 text-center font-semibold text-white shadow-sm hover:bg-red-700"
                 >
-                  📞 Call
+                  Instagram
                 </a>
   
                 <a
-                  href="https://www.pizzapizza.ca"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="mailto:connect@careofcanada.ca?subject=Local Pick Inquiry - Womb to World"
                   className="rounded-xl border border-[#ead7cf] bg-white px-5 py-3 text-center font-semibold text-[#3a1515] hover:bg-[#fff8f5]"
                 >
-                  🍕 Visit
+                  Ask CareOfCanada
                 </a>
               </div>
             </div>
@@ -138,7 +142,7 @@ export default function CommunityPartners() {
                 <p className="mt-3 leading-7 text-[#5c4b4b]">{text}</p>
   
                 <a
-                  href="mailto:hello@careofcanada.ca"
+                  href="mailto:connect@careofcanada.ca?subject=Local Pick Submission"
                   className="mt-5 inline-flex rounded-xl border border-[#ead7cf] bg-white px-5 py-3 font-semibold text-[#3a1515] hover:bg-[#fff8f5]"
                 >
                   Become a Partner
@@ -147,6 +151,7 @@ export default function CommunityPartners() {
             ))}
           </div>
         </section>
+        <SiteFooter />
       </main>
     );
   }

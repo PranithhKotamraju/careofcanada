@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "CareOfCanada",
-  description: "Canada. No hype. Just clarity.",
+  description: "Telugu Community Hub in Canada.",
   icons: {
     icon: "/brand/careofcanada-tab-icon.png",
     shortcut: "/brand/careofcanada-tab-icon.png",

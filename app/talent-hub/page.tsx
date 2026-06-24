@@ -3,6 +3,8 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -214,53 +216,7 @@ export default function TalentHub() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-[#251010]">
-      <nav className="sticky top-0 z-50 border-b border-[#ead7cf] bg-[#fff8f5]/90 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-          <a href="/" className="flex items-center gap-3 leading-tight">
-            <img
-              src="/brand/careofcanada-nav-logo.png"
-              alt="CareOfCanada"
-              className="h-14 w-14 object-contain"
-            />
-            <div>
-              <h1 className="text-lg font-bold text-red-600 sm:text-xl">
-                CareOfCanada
-              </h1>
-              <p className="text-xs text-[#5c4b4b]">Telugu Newcomer Hub</p>
-            </div>
-          </a>
-
-          <div className="hidden items-center gap-1 text-sm font-semibold md:flex">
-            {[
-              ["Home", "/"],
-              ["First 30 Days", "/first-30-days"],
-              ["Community", "/community"],
-              ["Talent Hub", "/talent-hub"],
-              ["1:1 Guidance", "/#guidance-call"],
-              ["Partners", "/community-partners"],
-            ].map(([label, href]) => (
-              <a
-                key={label}
-                href={href}
-                className={`rounded-full px-4 py-2 transition ${
-                  label === "Talent Hub"
-                    ? "bg-red-50 text-red-600"
-                    : "text-[#3a1515] hover:bg-red-50 hover:text-red-600"
-                }`}
-              >
-                {label}
-              </a>
-            ))}
-          </div>
-
-          <a
-            href="mailto:connect@careofcanada.ca?subject=Talent Hub Submission"
-            className="rounded-xl bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-red-700"
-          >
-            + Add Talent
-          </a>
-        </div>
-      </nav>
+      <SiteHeader active="Talent" />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6">
         <motion.div
@@ -460,6 +416,8 @@ export default function TalentHub() {
           </div>
         </motion.section>
       </section>
+
+      <SiteFooter />
     </main>
   );
 }
