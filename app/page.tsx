@@ -93,6 +93,14 @@ const thisWeekEvents = [
   },
 ];
 
+const latestReels = [
+  {
+    title: "Express Entry 2026 Major Update",
+    description: "12-month rule and new priority jobs explained in a quick reel.",
+    href: "https://www.instagram.com/reel/DU6chiEEp5O/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  },
+];
+
 const mailerLiteSubscribeUrl =
   "https://assets.mailerlite.com/jsonp/2461634/forms/190924753687545174/subscribe";
 
@@ -505,6 +513,62 @@ export default function Home() {
                 <p className="mt-2 leading-7 text-[#5c4b4b]">{text}</p>
                 <span className="mt-4 inline-flex text-sm font-semibold text-red-600 transition group-hover:translate-x-1">
                   Open resource →
+                </span>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-12">
+        <div className="rounded-3xl border border-red-900/30 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] p-5 text-white shadow-[0_20px_50px_rgba(220,38,38,0.14)] sm:p-7">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-200">
+                Fresh update
+              </p>
+              <h2 className="mt-2 text-3xl font-bold">
+                Latest Canada PR Updates 🇨🇦
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-red-50/70">
+                Quick Instagram explainers for immigration and PR news. Always
+                verify final rules on official IRCC pages.
+              </p>
+            </div>
+            <a
+              href="https://www.canada.ca/en/immigration-refugees-citizenship.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-xl border border-yellow-200/35 bg-white/10 px-4 py-2 text-sm font-semibold text-yellow-100 transition hover:bg-white/15"
+            >
+              Check IRCC
+            </a>
+          </div>
+
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {latestReels.map((reel, index) => (
+              <motion.a
+                key={reel.href}
+                href={reel.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={fadeUp}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+                whileHover={{ y: -5 }}
+                className="rounded-2xl border border-yellow-200/25 bg-[#fffaf2] p-5 text-[#251010] shadow-sm transition hover:border-yellow-300 hover:shadow-lg"
+              >
+                <span className="rounded-full bg-red-600 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-white">
+                  Instagram Reel
+                </span>
+                <h3 className="mt-4 text-xl font-bold">{reel.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#5c4b4b]">
+                  {reel.description}
+                </p>
+                <span className="mt-5 inline-flex text-sm font-semibold text-red-600">
+                  Watch on Instagram →
                 </span>
               </motion.a>
             ))}
