@@ -1,6 +1,7 @@
 "use client";
 
 import GuidanceCallCard from "@/components/GuidanceCallCard";
+import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
@@ -645,6 +646,7 @@ export default function CommunityWall() {
             </motion.div>
           ))}
 
+          <WhatsAppCommunityCard compact />
           <GuidanceCallCard />
 
           <motion.div

@@ -5,6 +5,7 @@ import CostCalculator from "@/components/CostCalculator";
 import JobTracker from "@/components/JobTracker";
 import BenefitsGuide from "@/components/BenefitsGuide";
 import CommunityMissionBanner from "@/components/CommunityMissionBanner";
+import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -294,6 +295,7 @@ export default function Home() {
               </div>
             </motion.div>
 
+            <WhatsAppCommunityCard compact className="mx-auto mt-4 max-w-2xl lg:mx-0" />
             <CommunityMissionBanner />
           </motion.div>
 
@@ -593,7 +595,26 @@ export default function Home() {
       </section>
 
       <footer className="relative z-10 border-t border-[#ead7cf] px-4 py-8 text-center text-sm text-[#5c4b4b]">
-        © 2026 CareOfCanada • The Telugu Newcomer Hub 🇨🇦
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <span>© 2026 CareOfCanada • The Telugu Newcomer Hub 🇨🇦</span>
+          <span className="hidden text-[#c9aaa0] sm:inline">•</span>
+          <a
+            href="https://chat.whatsapp.com/FofHnslAO2IGQ0oJysYWrG?mode=gi_t"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-green-700 hover:text-green-800"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/careofcanada"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-red-600 hover:text-red-700"
+          >
+            Instagram
+          </a>
+        </div>
       </footer>
     </main>
   );
