@@ -9,7 +9,7 @@ const fadeUp = {
   show: { opacity: 1, y: 0 },
 };
 
-const categories = ["All Talents", "Rappers"];
+const categories = ["All Talents", "Rappers", "Photographers"];
 
 const talents = [
   {
@@ -47,10 +47,27 @@ const talents = [
     verified: false,
     links: [],
   },
+  {
+    name: "Womb to World Moment Capture",
+    category: "Photographers",
+    city: "GTA, ON",
+    title: "In-home newborn, lifestyle, maternity & family photography",
+    image: "/images/womb-to-world-hanu.png",
+    imagePosition: "object-[center_42%]",
+    points: "New",
+    verified: false,
+    links: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/wombtoworldmomentcapture/",
+      },
+    ],
+  },
 ];
 
 const categoryStyles: Record<string, string> = {
   Rappers: "bg-red-700",
+  Photographers: "bg-green-700",
 };
 
 function SocialIcon({ label }: { label: string }) {
