@@ -65,17 +65,17 @@ export default function BenefitsGuide() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.45 }}
-        className="overflow-hidden rounded-3xl border border-red-900/30 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] text-white shadow-[0_20px_50px_rgba(220,38,38,0.14)]"
+        className="overflow-hidden rounded-3xl border border-[var(--coc-maple)]/30 bg-gradient-to-br from-[var(--coc-burgundy-2)] via-[var(--coc-burgundy)] to-[var(--coc-burgundy-3)] text-white shadow-[0_20px_50px_rgba(120,42,20,0.16)]"
       >
         <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-red-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#ff9b8f]">
               One-stop starter guide
             </p>
             <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
               Canada Benefits & Support
             </h2>
-            <p className="mt-4 max-w-xl leading-7 text-red-50/75">
+            <p className="mt-4 max-w-xl leading-7 text-[#f7d8d2]/75">
               A calm starting point for newcomer benefits. We keep this simple:
               learn what may apply, prepare documents, then confirm eligibility
               on official government websites.
@@ -90,13 +90,13 @@ export default function BenefitsGuide() {
               href="https://www.canada.ca/en/services/benefits/finder.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white transition hover:bg-red-700"
+              className="mt-6 inline-block rounded-xl bg-[var(--coc-maple)] px-5 py-3 font-semibold text-white transition hover:bg-[var(--coc-maple-dark)]"
             >
               Open Benefits Finder
             </a>
           </div>
 
-          <div className="grid gap-4 border-t border-white/10 bg-[#fff4e8]/8 p-5 lg:border-l lg:border-t-0 sm:p-6 xl:grid-cols-2">
+          <div className="grid gap-4 border-t border-white/10 bg-[var(--coc-cream)]/8 p-5 lg:border-l lg:border-t-0 sm:p-6 xl:grid-cols-2">
             {benefits.map((benefit, index) => (
               <motion.article
                 key={benefit.title}
@@ -104,11 +104,11 @@ export default function BenefitsGuide() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.35, delay: index * 0.04 }}
-                className="group flex h-full flex-col rounded-2xl border border-[#f1d6bd] bg-gradient-to-br from-[#fffaf2] via-[#fff3e6] to-[#fde7d1] p-4 text-[#251010] shadow-[0_10px_24px_rgba(120,42,20,0.12)] transition hover:-translate-y-1 hover:border-yellow-300/70 hover:shadow-[0_16px_34px_rgba(120,42,20,0.18)]"
+                className="group flex h-full flex-col rounded-2xl border border-[#f1d6bd] bg-gradient-to-br from-[#fffaf2] via-[var(--coc-cream)] to-[var(--coc-cream-2)] p-4 text-[var(--coc-ink)] shadow-[0_10px_24px_rgba(120,42,20,0.12)] transition hover:-translate-y-1 hover:border-yellow-300/70 hover:shadow-[0_16px_34px_rgba(120,42,20,0.18)]"
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between xl:flex-col">
                   <div>
-                    <span className="rounded-full border border-yellow-300/45 bg-white/70 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-red-700 shadow-sm">
+                    <span className="rounded-full border border-yellow-300/45 bg-white/70 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[var(--coc-maple)] shadow-sm">
                       {benefit.tag}
                     </span>
                     <h3 className="mt-3 text-lg font-bold">{benefit.title}</h3>
@@ -118,7 +118,7 @@ export default function BenefitsGuide() {
                     href={benefit.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shrink-0 rounded-xl border border-[#e7c7ae] bg-white/55 px-4 py-2 text-sm font-semibold text-red-700 transition hover:border-red-300 hover:bg-white xl:w-full xl:text-center"
+                    className="shrink-0 rounded-xl border border-[#e7c7ae] bg-white/55 px-4 py-2 text-sm font-semibold text-[var(--coc-maple)] transition hover:border-[var(--coc-maple)]/30 hover:bg-white xl:w-full xl:text-center"
                   >
                     Check official site
                   </a>

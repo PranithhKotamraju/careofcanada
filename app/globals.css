@@ -3,6 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --coc-cream: #fff8f0;
+  --coc-cream-2: #f7eadc;
+  --coc-cream-3: #f2decc;
+  --coc-ink: #251010;
+  --coc-muted: #604d48;
+  --coc-maple: #b42318;
+  --coc-maple-dark: #8f1d17;
+  --coc-maple-soft: #fff0eb;
+  --coc-burgundy: #251012;
+  --coc-burgundy-2: #3a1518;
+  --coc-burgundy-3: #140809;
+  --coc-gold: #d8a73f;
+  --coc-green: #2f7d4a;
+  --coc-green-dark: #27663d;
+  --coc-border: #e8d3c3;
 }
 
 @theme inline {

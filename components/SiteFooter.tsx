@@ -3,7 +3,7 @@ const whatsAppGroupUrl =
 
 export default function SiteFooter() {
   return (
-    <footer className="relative z-10 border-t border-[#ead7cf] bg-[#fff8f5]/70 px-4 py-10 text-sm text-[#5c4b4b]">
+    <footer className="relative z-10 border-t border-[var(--coc-border)] bg-gradient-to-b from-[var(--coc-cream)] to-[var(--coc-cream-2)] px-4 py-10 text-sm text-[var(--coc-muted)]">
       <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1.2fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
@@ -13,7 +13,7 @@ export default function SiteFooter() {
               className="h-12 w-12 object-contain"
             />
             <div>
-              <p className="text-lg font-bold text-red-600">CareOfCanada</p>
+              <p className="text-lg font-bold text-[var(--coc-maple)]">CareOfCanada</p>
               <p className="text-xs">Telugu Community Hub in Canada</p>
             </div>
           </div>
@@ -24,49 +24,49 @@ export default function SiteFooter() {
         </div>
 
         <div>
-          <h3 className="font-bold text-[#251010]">Explore</h3>
+          <h3 className="font-bold text-[var(--coc-ink)]">Explore</h3>
           <div className="mt-3 space-y-2">
-            <a href="/first-30-days" className="block hover:text-red-600">
+            <a href="/first-30-days" className="block hover:text-[var(--coc-maple)]">
               Start Here
             </a>
-            <a href="/#tools" className="block hover:text-red-600">
+            <a href="/#tools" className="block hover:text-[var(--coc-maple)]">
               Tools
             </a>
-            <a href="/#resources" className="block hover:text-red-600">
+            <a href="/#resources" className="block hover:text-[var(--coc-maple)]">
               Free Resources
             </a>
-            <a href="/#benefits" className="block hover:text-red-600">
+            <a href="/#benefits" className="block hover:text-[var(--coc-maple)]">
               Benefits
             </a>
           </div>
         </div>
 
         <div>
-          <h3 className="font-bold text-[#251010]">Community</h3>
+          <h3 className="font-bold text-[var(--coc-ink)]">Community</h3>
           <div className="mt-3 space-y-2">
-            <a href="/community" className="block hover:text-red-600">
+            <a href="/community" className="block hover:text-[var(--coc-maple)]">
               Community Wall
             </a>
-            <a href="/talent-hub" className="block hover:text-red-600">
+            <a href="/talent-hub" className="block hover:text-[var(--coc-maple)]">
               Talent Hub
             </a>
-            <a href="/community-partners" className="block hover:text-red-600">
+            <a href="/community-partners" className="block hover:text-[var(--coc-maple)]">
               Local Picks
             </a>
-            <a href="/#updates" className="block hover:text-red-600">
+            <a href="/#updates" className="block hover:text-[var(--coc-maple)]">
               Updates
             </a>
           </div>
         </div>
 
         <div>
-          <h3 className="font-bold text-[#251010]">Connect</h3>
+          <h3 className="font-bold text-[var(--coc-ink)]">Connect</h3>
           <div className="mt-3 space-y-2">
             <a
               href={whatsAppGroupUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block font-semibold text-green-700 hover:text-green-800"
+              className="block font-semibold text-[var(--coc-green)] hover:text-[var(--coc-green-dark)]"
             >
               WhatsApp
             </a>
@@ -74,13 +74,13 @@ export default function SiteFooter() {
               href="https://www.instagram.com/careofcanada"
               target="_blank"
               rel="noopener noreferrer"
-              className="block font-semibold text-red-600 hover:text-red-700"
+              className="block font-semibold text-[var(--coc-maple)] hover:text-[var(--coc-maple-dark)]"
             >
               Instagram
             </a>
             <a
               href="mailto:connect@careofcanada.ca"
-              className="block hover:text-red-600"
+              className="block hover:text-[var(--coc-maple)]"
             >
               connect@careofcanada.ca
             </a>
@@ -88,7 +88,7 @@ export default function SiteFooter() {
         </div>
       </div>
 
-      <div className="mx-auto mt-8 max-w-6xl border-t border-[#ead7cf] pt-5 text-xs leading-5">
+      <div className="mx-auto mt-8 max-w-6xl border-t border-[var(--coc-border)] pt-5 text-xs leading-5">
         © 2026 CareOfCanada. General community information only — always verify
         official government, employer, housing, and service details.
       </div>

@@ -33,7 +33,7 @@ export default function ResourcePage({
   cta,
 }: ResourcePageProps) {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] px-4 py-8 text-[#251010] sm:px-6">
+    <main className="min-h-screen bg-gradient-to-b from-[var(--coc-cream)] via-[#fff3e7] to-[var(--coc-cream-2)] px-4 py-8 text-[var(--coc-ink)] sm:px-6">
       <div className="-mx-4 -mt-8 mb-8 sm:-mx-6">
         <SiteHeader />
       </div>
@@ -41,12 +41,12 @@ export default function ResourcePage({
       <div className="mx-auto max-w-5xl">
         <Link
           href="/#resources"
-          className="inline-flex rounded-xl border border-[#ead7cf] bg-white/75 px-4 py-2 text-sm font-semibold text-[#3a1515] transition hover:bg-white"
+          className="inline-flex rounded-xl border border-[var(--coc-border)] bg-white/75 px-4 py-2 text-sm font-semibold text-[var(--coc-burgundy-2)] transition hover:bg-white"
         >
           ← Back to Free Resources
         </Link>
 
-        <section className="mt-6 overflow-hidden rounded-3xl border border-red-900/35 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] text-white shadow-[0_22px_55px_rgba(220,38,38,0.14)]">
+        <section className="mt-6 overflow-hidden rounded-3xl border border-[var(--coc-maple)]/35 bg-gradient-to-br from-[var(--coc-burgundy-2)] via-[var(--coc-burgundy)] to-[var(--coc-burgundy-3)] text-white shadow-[0_22px_55px_rgba(120,42,20,0.16)]">
           <div className="relative p-6 sm:p-9">
             <div className="absolute right-[-70px] top-4 text-[180px] leading-none text-red-500/10">
               🍁
@@ -58,13 +58,13 @@ export default function ResourcePage({
               <h1 className="mt-3 max-w-3xl text-4xl font-black tracking-tight sm:text-5xl">
                 {title}
               </h1>
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-red-50/75">
+              <p className="mt-4 max-w-3xl text-lg leading-8 text-[#f7d8d2]/75">
                 {description}
               </p>
               {cta && (
                 <a
                   href={cta.href}
-                  className="mt-6 inline-block rounded-xl bg-red-600 px-5 py-3 font-semibold text-white transition hover:bg-red-700"
+                  className="mt-6 inline-block rounded-xl bg-[var(--coc-maple)] px-5 py-3 font-semibold text-white transition hover:bg-[var(--coc-maple-dark)]"
                 >
                   {cta.label}
                 </a>
@@ -83,7 +83,7 @@ export default function ResourcePage({
               <ul className="mt-4 space-y-3 text-sm leading-6 text-[#5c4b4b]">
                 {section.items.map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-red-600" />
+                    <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[var(--coc-maple)]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -102,7 +102,7 @@ export default function ResourcePage({
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-2xl border border-[#ead7cf] bg-[#fff8f5] px-4 py-3 text-sm font-semibold text-red-700 transition hover:border-red-200 hover:bg-red-50"
+                  className="rounded-2xl border border-[var(--coc-border)] bg-[var(--coc-cream)] px-4 py-3 text-sm font-semibold text-[var(--coc-maple)] transition hover:border-[var(--coc-maple)]/25 hover:bg-[var(--coc-maple-soft)]"
                 >
                   {link.label} ↗
                 </a>

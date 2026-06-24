@@ -68,8 +68,8 @@ const talents = [
 ];
 
 const categoryStyles: Record<string, string> = {
-  Rappers: "bg-red-700",
-  Photographers: "bg-green-700",
+  Rappers: "bg-[var(--coc-maple)]",
+  Photographers: "bg-[var(--coc-green)]",
 };
 
 function SocialIcon({ label }: { label: string }) {
@@ -156,7 +156,7 @@ function VerifiedBadge() {
 
 function PremiumIcon({ children }: { children: ReactNode }) {
   return (
-    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-yellow-300/35 bg-gradient-to-br from-yellow-200/20 to-red-800/25 text-sm font-black tracking-wide text-yellow-200 shadow-inner">
+    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-yellow-300/35 bg-gradient-to-br from-yellow-200/20 to-[var(--coc-maple-dark)]/25 text-sm font-black tracking-wide text-yellow-200 shadow-inner">
       {children}
     </span>
   );
@@ -215,7 +215,7 @@ export default function TalentHub() {
       : talents.filter((talent) => talent.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#fff8f5] via-[#fff4ef] to-[#fdeee8] text-[#251010]">
+    <main className="min-h-screen bg-gradient-to-b from-[var(--coc-cream)] via-[#fff3e7] to-[var(--coc-cream-2)] text-[var(--coc-ink)]">
       <SiteHeader active="Talent" />
 
       <section className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6">
@@ -224,10 +224,10 @@ export default function TalentHub() {
           initial="hidden"
           animate="show"
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl border border-red-900/40 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] text-white shadow-[0_24px_70px_rgba(220,38,38,0.18)]"
+          className="relative overflow-hidden rounded-3xl border border-[var(--coc-maple)]/35 bg-gradient-to-br from-[var(--coc-burgundy-2)] via-[var(--coc-burgundy)] to-[var(--coc-burgundy-3)] text-white shadow-[0_24px_70px_rgba(120,42,20,0.18)]"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_30%,rgba(220,38,38,0.24),transparent_32%)]" />
-          <div className="absolute right-[-90px] top-8 text-[220px] leading-none text-red-500/10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_30%,rgba(180,35,24,0.22),transparent_32%)]" />
+          <div className="absolute right-[-90px] top-8 text-[220px] leading-none text-[var(--coc-maple)]/10">
             🍁
           </div>
 
@@ -252,7 +252,7 @@ export default function TalentHub() {
                   <p className="mt-3 text-lg font-semibold text-yellow-200">
                     Telugu Rapper • Community Founder
                   </p>
-                  <p className="mt-5 max-w-2xl text-base leading-7 text-red-50/85">
+                  <p className="mt-5 max-w-2xl text-base leading-7 text-[#f7d8d2]/85">
                     “Building a strong Telugu community in Canada. From
                     struggle to strength, mana journey together.”
                   </p>
@@ -260,7 +260,7 @@ export default function TalentHub() {
               </div>
             </div>
 
-            <div className="rounded-3xl border border-red-700/60 bg-[#1b0f0f]/80 p-5 shadow-xl">
+            <div className="rounded-3xl border border-[var(--coc-maple)]/45 bg-[#1b0f0f]/80 p-5 shadow-xl">
               <div className="space-y-4 text-sm">
                 {[
                   ["mic", "Telugu Rapper", "Artist"],
@@ -274,13 +274,13 @@ export default function TalentHub() {
                     </PremiumIcon>
                     <div>
                       <p className="font-bold text-white">{title}</p>
-                      <p className="text-red-100/65">{text}</p>
+                      <p className="text-[#f7d8d2]/65">{text}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-5 rounded-2xl border border-red-700/60 bg-red-900/35 px-4 py-3">
+              <div className="mt-5 rounded-2xl border border-[var(--coc-maple)]/45 bg-[var(--coc-maple-dark)]/35 px-4 py-3">
                 <p className="flex items-center justify-between font-bold text-yellow-200">
                   <span>Maple Points</span>
                   <span className="text-2xl">1,250</span>
@@ -298,8 +298,8 @@ export default function TalentHub() {
               onClick={() => setActiveCategory(category)}
               className={`shrink-0 rounded-full px-5 py-3 text-sm font-semibold shadow-sm transition ${
                 activeCategory === category
-                  ? "bg-red-700 text-white"
-                  : "border border-[#ead7cf] bg-white/80 text-[#3a1515] hover:bg-red-50 hover:text-red-600"
+                  ? "bg-[var(--coc-maple)] text-white"
+                  : "border border-[var(--coc-border)] bg-white/80 text-[var(--coc-burgundy-2)] hover:bg-[var(--coc-maple-soft)] hover:text-[var(--coc-maple)]"
               }`}
             >
               {category}
@@ -307,7 +307,7 @@ export default function TalentHub() {
           ))}
         </div>
 
-        <p className="mt-2 text-sm leading-6 text-[#5c4b4b]">
+        <p className="mt-2 text-sm leading-6 text-[var(--coc-muted)]">
           Maple Verified profiles are manually reviewed by CareOfCanada.
         </p>
 
@@ -321,9 +321,9 @@ export default function TalentHub() {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
               whileHover={{ y: -7 }}
-              className="overflow-hidden rounded-3xl border border-[#ead7cf] bg-white/85 shadow-sm backdrop-blur hover:shadow-xl"
+              className="overflow-hidden rounded-3xl border border-[var(--coc-border)] bg-white/85 shadow-sm backdrop-blur hover:shadow-xl"
             >
-              <div className="relative h-64 overflow-hidden bg-[#fff4ef]">
+              <div className="relative h-64 overflow-hidden bg-[var(--coc-cream)]">
                 <img
                   src={talent.image}
                   alt={talent.name}
@@ -346,11 +346,11 @@ export default function TalentHub() {
                   )}
                 </div>
 
-                <p className="mt-1 text-sm text-[#5c4b4b]">{talent.city}</p>
+                <p className="mt-1 text-sm text-[var(--coc-muted)]">{talent.city}</p>
                 <p className="mt-2 text-sm font-medium">{talent.title}</p>
 
-                <div className="mt-5 flex items-center justify-between border-t border-[#ead7cf] pt-4">
-                  <p className="text-sm font-bold text-red-700">
+                <div className="mt-5 flex items-center justify-between border-t border-[var(--coc-border)] pt-4">
+                  <p className="text-sm font-bold text-[var(--coc-maple)]">
                     Maple {talent.points}
                   </p>
                   <div className="flex gap-2">
@@ -361,14 +361,14 @@ export default function TalentHub() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={link.label}
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#ead7cf] bg-gradient-to-br from-white to-[#fff4ef] text-red-700 shadow-sm transition hover:-translate-y-0.5 hover:border-red-300 hover:bg-red-50 hover:text-red-600 hover:shadow-md"
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--coc-border)] bg-gradient-to-br from-white to-[var(--coc-cream)] text-[var(--coc-maple)] shadow-sm transition hover:-translate-y-0.5 hover:border-[var(--coc-maple)]/30 hover:bg-[var(--coc-maple-soft)] hover:shadow-md"
                         title={link.label}
                       >
                         <SocialIcon label={link.label} />
                       </a>
                     ))}
                     {talent.links.length === 0 && (
-                      <span className="rounded-full border border-[#ead7cf] bg-[#fff8f5] px-3 py-1 text-xs font-semibold text-[#7a6f6b]">
+                      <span className="rounded-full border border-[var(--coc-border)] bg-[var(--coc-cream)] px-3 py-1 text-xs font-semibold text-[#7a6f6b]">
                         Links coming soon
                       </span>
                     )}
@@ -385,7 +385,7 @@ export default function TalentHub() {
           whileInView="show"
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-7 rounded-3xl border border-red-900/40 bg-gradient-to-br from-[#3a1515] via-[#251010] to-[#140909] p-6 text-white shadow-[0_20px_50px_rgba(220,38,38,0.16)]"
+          className="mt-7 rounded-3xl border border-[var(--coc-maple)]/35 bg-gradient-to-br from-[var(--coc-burgundy-2)] via-[var(--coc-burgundy)] to-[var(--coc-burgundy-3)] p-6 text-white shadow-[0_20px_50px_rgba(120,42,20,0.16)]"
         >
           <div className="grid gap-5 md:grid-cols-[1fr_1fr_1fr_320px] md:items-center">
             {[
@@ -399,17 +399,17 @@ export default function TalentHub() {
                 </PremiumIcon>
                 <div>
                   <h3 className="font-bold text-yellow-200">{title}</h3>
-                  <p className="mt-1 text-sm leading-6 text-red-50/75">{text}</p>
+                  <p className="mt-1 text-sm leading-6 text-[#f7d8d2]/75">{text}</p>
                 </div>
               </div>
             ))}
 
             <a
               href="mailto:connect@careofcanada.ca?subject=Talent Hub Submission"
-              className="rounded-2xl border border-red-500/70 bg-red-700/45 px-5 py-4 font-bold text-yellow-100 transition hover:bg-red-700"
+              className="rounded-2xl border border-[var(--coc-maple)]/60 bg-[var(--coc-maple-dark)]/55 px-5 py-4 font-bold text-yellow-100 transition hover:bg-[var(--coc-maple-dark)]/75"
             >
               + Add Your Talent
-              <span className="block text-sm font-medium text-red-50/75">
+              <span className="block text-sm font-medium text-[#f7d8d2]/75">
                 Be a part of our growing hub
               </span>
             </a>
