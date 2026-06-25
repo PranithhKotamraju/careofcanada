@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
@@ -50,6 +52,7 @@ export default function RootLayout({
             ml('account', '2461634');
           `}
         </Script>
+        <Analytics />
       </body>
     </html>
   );

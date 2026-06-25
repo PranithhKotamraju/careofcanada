@@ -5,6 +5,7 @@ import CostCalculator from "@/components/CostCalculator";
 import JobTracker from "@/components/JobTracker";
 import BenefitsGuide from "@/components/BenefitsGuide";
 import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
+import NewsletterWelcomeCard from "@/components/NewsletterWelcomeCard";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useState } from "react";
@@ -179,9 +180,7 @@ export default function Home() {
                   </p>
 
                   {emailSignupSuccess ? (
-                    <div className="mt-4 rounded-2xl border border-[var(--coc-maple)]/15 bg-[var(--coc-maple-soft)] px-4 py-3 text-sm font-semibold text-[var(--coc-maple)]">
-                      Welcome aboard, mowa 🍁 Check your inbox.
-                    </div>
+                    <NewsletterWelcomeCard />
                   ) : (
                     <form
                       action={mailerLiteSubscribeUrl}

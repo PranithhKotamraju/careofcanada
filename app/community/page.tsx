@@ -2,9 +2,11 @@
 
 import GuidanceCallCard from "@/components/GuidanceCallCard";
 import WhatsAppCommunityCard from "@/components/WhatsAppCommunityCard";
+import NewsletterWelcomeCard from "@/components/NewsletterWelcomeCard";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 
@@ -131,9 +133,7 @@ export default function CommunityWall() {
       </p>
 
       {emailSignupSuccess ? (
-        <div className="mt-4 rounded-2xl border border-red-100 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
-          Welcome aboard, mowa 🍁 Check your inbox.
-        </div>
+        <NewsletterWelcomeCard />
       ) : (
         <form
           action={mailerLiteSubscribeUrl}
@@ -377,21 +377,21 @@ export default function CommunityWall() {
             </p>
 
             <nav className="mt-6 space-y-2 text-sm font-semibold">
-              <a href="/" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
+              <Link href="/" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
                 Home
-              </a>
-              <a href="/first-30-days" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
+              </Link>
+              <Link href="/first-30-days" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
                 First 30 Days
-              </a>
-              <a href="/community" className="block rounded-lg bg-red-600 px-3 py-2 text-white">
+              </Link>
+              <Link href="/community" className="block rounded-lg bg-red-600 px-3 py-2 text-white">
                 Community
-              </a>
-              <a href="/talent-hub" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
+              </Link>
+              <Link href="/talent-hub" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
                 Talent Hub
-              </a>
-              <a href="/community-partners" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
+              </Link>
+              <Link href="/community-partners" className="block rounded-lg px-3 py-2 text-[#5c4b4b] hover:bg-red-50 hover:text-red-600">
                 Partners
-              </a>
+              </Link>
             </nav>
           </motion.div>
 
@@ -449,7 +449,7 @@ export default function CommunityWall() {
             className="mb-5 rounded-3xl border border-[#ead7cf] bg-white/80 p-4 shadow-md backdrop-blur sm:p-5"
           >
             <h2 className="text-lg font-bold sm:text-xl">
-              What's on your mind, mowa?
+              What&apos;s on your mind, mowa?
             </h2>
 
             <form onSubmit={handleSubmit} noValidate>
