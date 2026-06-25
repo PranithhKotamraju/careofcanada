@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const googleAnalyticsId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-134N3L83D2";
 
 export const metadata: Metadata = {
   title: "CareOfCanada",

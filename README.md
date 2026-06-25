@@ -29,7 +29,7 @@ NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-search-console-token
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 ```
 
-`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` enables Google Search Console verification. `NEXT_PUBLIC_GA_MEASUREMENT_ID` enables Google Analytics 4 tracking.
+`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` enables Google Search Console verification. Google Analytics 4 is configured with the CareOfCanada measurement ID by default; `NEXT_PUBLIC_GA_MEASUREMENT_ID` can override it if the property changes later.
 
 ## Learn More
 
