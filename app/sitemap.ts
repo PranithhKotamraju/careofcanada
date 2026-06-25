@@ -1,42 +1,34 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from "next";
+
+const baseUrl = "https://careofcanada.ca";
+
+const routes: Array<{
+  path: string;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  priority: number;
+}> = [
+  { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/first-30-days", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/community", changeFrequency: "daily", priority: 0.9 },
+  { path: "/community-partners", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/talent-hub", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/resources/resume-template", changeFrequency: "monthly", priority: 0.7 },
+  {
+    path: "/resources/interview-questions",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+  { path: "/resources/newcomer-links", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/resources/money-basics", changeFrequency: "monthly", priority: 0.7 },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: 'https://careofcanada.ca',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/about',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/resources',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/resources/resume-template',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/resources/interview-questions',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/resources/newcomer-links',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/resources/money-basics',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/videos',
-      lastModified: new Date(),
-    },
-    {
-      url: 'https://careofcanada.ca/talent-hub',
-      lastModified: new Date(),
-    },
-  ]
+  const lastModified = new Date();
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified,
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }
