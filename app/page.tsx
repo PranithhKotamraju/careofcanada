@@ -73,6 +73,15 @@ const resources = [
 
 const thisWeekEvents = [
   {
+    title: "VT Seva & JET Canada 2026",
+    date: "July 1-5, 2026",
+    location: "Oshawa & Mississauga, ON",
+    description:
+      "Wisdom, service, transformation, devotion, AI Q&A, VT Seva launch, Bhagavada Gita workshop, and Hanuman Aradhana events.",
+    image: "/images/vt-seva-jet-canada-2026.png",
+    href: "/community-partners",
+  },
+  {
     title: "Mahalaxmi Vastra Veda Saree Pop-Up",
     date: "June 27, 2026",
     location: "42 Clipper Lane, Bowmanville, ON",
