@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 export const metadata: Metadata = {
   title: "CareOfCanada",
   description: "Telugu Community Hub in Canada.",
@@ -23,6 +26,13 @@ export const metadata: Metadata = {
     shortcut: "/brand/careofcanada-tab-icon.png",
     apple: "/brand/careofcanada-tab-icon.png",
   },
+  ...(googleSiteVerification
+    ? {
+        verification: {
+          google: googleSiteVerification,
+        },
+      }
+    : {}),
 };
 
 export default function RootLayout({
@@ -52,6 +62,22 @@ export default function RootLayout({
             ml('account', '2461634');
           `}
         </Script>
+        {googleAnalyticsId ? (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', ${JSON.stringify(googleAnalyticsId)});
+              `}
+            </Script>
+          </>
+        ) : null}
         <Analytics />
       </body>
     </html>

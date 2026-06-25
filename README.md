@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Google Setup
+
+Set these environment variables in Vercel when Google provides the values:
+
+```bash
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-search-console-token
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` enables Google Search Console verification. `NEXT_PUBLIC_GA_MEASUREMENT_ID` enables Google Analytics 4 tracking.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
