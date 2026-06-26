@@ -6,6 +6,7 @@ import { useState } from "react";
 const navLinks = [
   ["Plan", "/#canada-plan"],
   ["CRS", "/#crs-score"],
+  ["Panchangam", "/#panchangam"],
   ["Start", "/first-30-days"],
   ["Tools", "/#tools"],
   ["Community", "/community"],

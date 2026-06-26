@@ -3,6 +3,7 @@
 import GuidanceCallCard from "@/components/GuidanceCallCard";
 import CanadaPlan from "@/components/CanadaPlan";
 import CrsScoreSnapshot from "@/components/CrsScoreSnapshot";
+import TeluguPanchangam from "@/components/TeluguPanchangam";
 import CostCalculator from "@/components/CostCalculator";
 import JobTracker from "@/components/JobTracker";
 import BenefitsGuide from "@/components/BenefitsGuide";
@@ -48,6 +49,7 @@ const stats = [
 const tools = [
   ["🧭", "My Canada Plan", "Get a personalized newcomer roadmap for your next 7 days and first 30 days.", "#canada-plan"],
   ["🎯", "CRS Score Snapshot", "Compare your CRS score with the latest official Express Entry draws.", "#crs-score"],
+  ["📅", "Canada Panchangam", "Check Telugu Panchangam for Canadian city timezones.", "#panchangam"],
   ["📋", "First 30 Days Checklist", "SIN, bank account, phone plan, health card, resume and basic setup.", "/first-30-days"],
   ["💰", "Cost Calculator", "Estimate rent, groceries, phone, transit and monthly survival cost.", "#cost-calculator"],
   ["💼", "Job Tracker", "Track job applications, interview status and follow-up dates.", "#job-tracker"],
@@ -116,6 +118,7 @@ const mailerLiteSubscribeUrl =
 function getToolCta(title: string) {
   if (title === "My Canada Plan") return "Build Plan";
   if (title === "CRS Score Snapshot") return "Check CRS";
+  if (title === "Canada Panchangam") return "Open Panchangam";
   if (title === "Cost Calculator") return "Open Calculator";
   if (title === "Job Tracker") return "Open Tracker";
 
@@ -317,13 +320,14 @@ export default function Home() {
 
       <CanadaPlan />
       <CrsScoreSnapshot />
+      <TeluguPanchangam />
 
       <section id="tools" className="relative z-10 mx-auto max-w-6xl px-4 py-7 sm:px-6 sm:py-9">
         <h2 className="mb-5 text-center text-2xl font-bold sm:text-3xl">
           Tools for your first steps in Canada
         </h2>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {tools.map(([icon, title, text, href], index) => (
             <motion.div
               key={title}
