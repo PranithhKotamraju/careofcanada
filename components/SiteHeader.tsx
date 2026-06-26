@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
+  ["Plan", "/#canada-plan"],
+  ["CRS", "/#crs-score"],
   ["Start", "/first-30-days"],
   ["Tools", "/#tools"],
   ["Community", "/community"],
